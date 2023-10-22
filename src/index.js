@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import createTheme from "@mui/material/styles/createTheme";
+import {HashRouter} from "react-router-dom";
 
 const theme = createTheme ({
     palette: {
@@ -13,12 +14,14 @@ const theme = createTheme ({
     },
 })
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-      <ThemeProvider theme={theme}>
-          <App/>
-      </ThemeProvider>
-  </React.StrictMode>
+const root = ReactDOM.createRoot (document.getElementById ('root'));
+root.render (
+    <React.StrictMode>
+        <HashRouter>
+            <ThemeProvider theme={theme}>
+                <App/>
+            </ThemeProvider>
+        </HashRouter>
+    </React.StrictMode>
 );
-reportWebVitals();
+reportWebVitals ();
