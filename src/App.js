@@ -17,7 +17,6 @@ function App() {
                 <Route exact path="cart" element={<Cart />}/>
 
             </Routes>
-            {/*<Route exact path='/' render={() => <HomePage />}/>*/}
         </div>
     );
 }
