@@ -1,9 +1,17 @@
 import React from "react";
+import {Typography} from "@mui/material";
 
-const ProductArchive =()=> {
+const ProductArchive =(props)=> {
+    let glassesList = props.productData.glasses.solarGlass
     return (
         <>
-            ProductArchive
+            {glassesList.map ((g) => (
+                <div>
+                    <img src={g.glassImgUrl} alt=""/>
+                    <Typography variant={"h6"}>{g.glassesTitle}</Typography>
+                </div>
+            ))}
+
         </>
     )
 }
