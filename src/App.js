@@ -3,20 +3,17 @@ import React from "react";
 import Header from "./components/header/Header";
 import HomePage from "./components/homePage/HomePage";
 import { Routes, Route } from "react-router-dom";
-import ProductArchive from "./components/productArchive/ProductArchive";
 import Cart from "./components/cart/Cart";
+import ProductArchiveContainer from "./components/productArchive/ProductArchiveContainer";
 
 function App() {
     return (
-        <p class="test"></p>
-        
         <div className="App">
-            <Header/>
-            {/* Rote - работа со ссылками в доменном имени*/}
+            <Header />
             <Routes>
-                <Route exact path="/" element={<HomePage/>}/>
-                <Route exact path="product" element={<ProductArchive/>}/>
-                <Route exact path="cart" element={<Cart />}/>
+                <Route path="/" element={<HomePage />} />
+                <Route path="product" element={<ProductArchiveContainer />} />
+                <Route path="cart" element={<Cart />} />
             </Routes>
         </div>
     );
