@@ -9,7 +9,6 @@ import Cart from "./components/cart/Cart";
 function App() {
     return (
         <div className="App">
-            
             <Header />
             {/* Rote - работа со ссылками в доменном имени*/}
             <Routes>
