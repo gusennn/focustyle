@@ -8,15 +8,13 @@ import Cart from "./components/cart/Cart";
 
 function App() {
     return (
-        <p class="test"></p>
-        
         <div className="App">
-            <Header/>
+            <Header />
             {/* Rote - работа со ссылками в доменном имени*/}
             <Routes>
-                <Route exact path="/" element={<HomePage/>}/>
-                <Route exact path="product" element={<ProductArchive/>}/>
-                <Route exact path="cart" element={<Cart />}/>
+                <Route exact path="/" element={<HomePage />} />
+                <Route exact path="product" element={<ProductArchive />} />
+                <Route exact path="cart" element={<Cart />} />
             </Routes>
         </div>
     );
