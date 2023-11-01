@@ -26,5 +26,6 @@ const ProductArchive = (props) => {
         </>
     )
 }
+//удалить этот коммент
 
 export default ProductArchive
