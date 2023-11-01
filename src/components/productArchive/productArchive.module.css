@@ -1,0 +1,9 @@
+.exampleClass {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.exampleCard {
+    border: 1px solid #000;
+}
