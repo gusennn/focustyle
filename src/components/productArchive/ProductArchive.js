@@ -7,8 +7,8 @@ const ProductArchive =(props)=> {
         <>
             {glassesList.map ((g) => (
                 <div>
-                    <img src={g.glassImgUrl} alt=""/>
-                    <Typography variant={"h6"}>{g.glassesTitle}</Typography>
+                    <img src={g.gImgUrl} alt=""/>
+                    <Typography variant={"h6"}>{g.gTitle}</Typography>
                 </div>
             ))}
 
