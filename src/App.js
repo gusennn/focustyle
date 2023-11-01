@@ -5,16 +5,26 @@ import HomePage from "./components/homePage/HomePage";
 import {Routes, Route} from "react-router-dom";
 import Cart from "./components/cart/Cart";
 import ProductArchiveContainer from "./components/productArchive/ProductArchiveContainer";
+import Footer from "./components/footer/Footer";
 
 function App() {
     return (
         <div className="App">
-            <Header/>
-            <Routes>
-                <Route  path="/" element={<HomePage/>}/>
-                <Route  path="product" element={<ProductArchiveContainer />}/>
-                <Route  path="cart" element={<Cart />}/>
-            </Routes>
+            <div className='header'>
+                <Header/>
+            </div>
+
+            <div className='componentRenderArea'>
+                <Routes>
+                    <Route  path="/" element={<HomePage />}/>
+                    <Route  path="product" element={<ProductArchiveContainer />}/>
+                    <Route  path="cart" element={<Cart />}/>
+                </Routes>
+            </div>
+
+            <div className='footer'>
+                <Footer />
+            </div>
         </div>
     );
 }
