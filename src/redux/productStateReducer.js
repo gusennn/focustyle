@@ -6,6 +6,7 @@ let initialState = {
                 gImgUrl: '../glassesImage/glasses/imgSunny.png',
                 gTitle: 'Ray-Ban Aviator Gradient',
                 gGender: 'Unisex',
+                gType: 'Солнцезащитные',
                 gFrameMaterial: 'Металл',
                 gFrameColor: 'Серебристый',
                 gLensMaterial: 'Минеральное стекло',
@@ -21,6 +22,7 @@ let initialState = {
                 gImgUrl: '../glassesImage/glasses/img_sunny2.png',
                 gTitle: 'Versace',
                 gGender: 'Мужские',
+                gType: 'Солнцезащитные',
                 gFrameMaterial: 'Нейлон',
                 gFrameColor: 'Черный',
                 gLensMaterial: 'Полиамид',
@@ -36,6 +38,7 @@ let initialState = {
                 gImgUrl: '../glassesImage/glasses/img_sunny3.png',
                 gTitle: 'Ray-Ban Hexagonal Gunmetal',
                 gGender: 'Unisex',
+                gType: 'Солнцезащитные',
                 gFrameMaterial: 'Сталь',
                 gFrameColor: 'Темно-серый',
                 gLensMaterial: 'Минеральное стекло',
@@ -50,64 +53,70 @@ let initialState = {
         fishingGlass: [
             {
                 id: 0,
-                gImgUrl: '../glassesImage/glasses/imgSunny.png',
-                gTitle: 'Солнцезащитные очки Ray-Ban Aviator Gradient RB3025 003/3F',
+                gImgUrl: '../glassesImage/glasses/img_fishing1.png',
+                gTitle: 'King Trout 6F',
                 gGender: 'Unisex',
-                gFrameMaterial: 'Металл',
-                gFrameColor: 'Серебристый',
-                gFrameColorHEX: '#aaa',
-                gLensMaterial: 'Минеральное стекло',
-                gLensType: 'Градиентный',
-                gLensColor: 'Голубой',
-                gPrice: 18319,
+                gType: 'Рыболовные поляризационные',
+                gFrameMaterial: 'Пластик',
+                gFrameColor: 'Камуфляж',
+                gLensColorHEX: '#240a34',
+                gLensMaterial: 'Поликарбонат',
+                gLensType: 'Антибликовый поляризационный',
+                gLensColor: 'Черный',
+                gPrice: 1450,
                 gDiscountPercent: 10,
                 isTry: true,
             },
             {
                 id: 1,
-                gImgUrl: '../glassesImage/glasses/img_sunny2.png',
-                gTitle: 'Солнцезащитные очки Versace VE4361 GB1/87',
-                gGender: 'Мужские',
-                gFrameMaterial: 'Нейлон',
+                gImgUrl: '../glassesImage/glasses/img_fishing2.png',
+                gTitle: 'King Trout 9F',
+                gGender: 'Unisex',
+                gType: 'Рыболовные поляризационные',
+                gFrameMaterial: 'Пластик',
                 gFrameColor: 'Черный',
-                gFrameColorHEX: '#aaa',
-                gLensMaterial: 'Минеральное стекло',
-                gLensType: 'Градиентный',
-                gLensColor: 'Голубой',
-                gPrice: 18319,
+                gLensColorHEX: '#fee121',
+                gLensMaterial: 'Поликарбонат',
+                gLensType: 'Антибликовый поляризационный',
+                gLensColor: 'Желто-голубой градиентный',
+                gPrice: 1550,
                 gDiscountPercent: 10,
                 isTry: true,
             },
             {
                 id: 2,
-                gImgUrl: '../glassesImage/glasses/img_sunny3.png',
-                gTitle: 'Солнцезащитные очки Ray-Ban Hexagonal RB3548N 004/71 Gunmetal',
+                gImgUrl: '../glassesImage/glasses/img_fishing3.png',
+                gTitle: 'King Trout 1F',
                 gGender: 'Unisex',
-                gFrameMaterial: 'Металл',
-                gFrameColor: 'Серебристый',
-                gFrameColorHEX: '#aaa',
-                gLensMaterial: 'Минеральное стекло',
-                gLensType: 'Градиентный',
-                gLensColor: 'Голубой',
-                gPrice: 18319,
+                gType: 'Рыболовные поляризационные',
+                gFrameMaterial: 'Пластик',
+                gFrameColor: 'Темно-синий',
+                gLensColorHEX: '#051e6a',
+                gLensMaterial: 'Поликарбонат',
+                gLensType: 'Антибликовый поляризационный',
+                gLensColor: 'Синий',
+                gPrice: 1550,
                 gDiscountPercent: 10,
                 isTry: true,
             },
         ],
-    }
+    },
+    columnCount: 1,
 }
 
-const PRODUCT = 'PRODUCT'
-export const productMapCreator = () => {
+const PRODUCT_SWITCH = 'PRODUCT-SWITCH'
+export const productTabSwitch = (num) => {
     return {
-        type: PRODUCT,
+        type: PRODUCT_SWITCH, numFromAction: num
     }
 }
 
 const productReducer = ( state = initialState, action ) => {
     switch (action.type) {
-        case PRODUCT: {
-
+        case PRODUCT_SWITCH: {
+            let dataSpread = {...state}
+            dataSpread.columnCount = action.numFromAction
+            return dataSpread
         }
         default:
             return state

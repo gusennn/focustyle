@@ -1,0 +1,61 @@
+.glassCardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.glassCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 20px 20px;
+    transition: .2s;
+}
+.glassCard:hover {
+    transform: scale(1.01);
+    transition: .2s;
+}
+
+
+.glassColorPointer {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.glassCardTitle {
+    margin-bottom: 10px;
+}
+.cardAttributes {
+
+}
+
+.cardPrice{
+    margin: 10px 0px;
+}
+
+.cardAttributes h6:nth-last-child(1), .cardAttributes h6:nth-last-child(2) {
+    display: inline;
+}
+
+.cardAttributes h6:nth-last-child(1) {
+    margin-left: 20px;
+    opacity: .4;
+}
+
+.cardButtonsWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+    .glassCard {
+        width: 100%;
+    }
+}
