@@ -1,0 +1,13 @@
+.tabsItems {
+    display: flex;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tabBtn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+

@@ -11,6 +11,7 @@
 
 .componentRenderArea {
   min-height: 95vh;
+  margin-bottom: 50px;
 }
 
 .componentContainer {

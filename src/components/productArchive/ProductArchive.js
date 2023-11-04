@@ -1,27 +1,81 @@
 import React from "react";
 import TabContent from "./tabContent/TabContent";
+import paCSS from './productArchive.module.css'
 
 const ProductArchive = (props) => {
 
     let columnCount = props.columnCount
-    let solarProps = props.productData.solarGlass
-    let fishProps = props.productData.fishingGlass
 
-    let onColumnChange = (e) => {
+    let solarProps = props.productData.solarGlass
+    let fishingProps = props.productData.fishingGlass
+    let drivingProps = props.productData.drivingGlass
+    let pcProps = props.productData.pcGlass
+
+    let solarDesc = props.productDesc.solar
+    let fishingDesc = props.productDesc.fishing
+    let drivingDesc = props.productDesc.driving
+    let pcDesc = props.productDesc.pc
+
+
+    let onColumnChangeSolar = (e) => {
         let n = e.target.value
-        props.tabsSwitcher (n)
+        props.tabsSwitcher(n)
+
+        document.getElementById(`tabBtn2`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn3`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn4`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn1`).classList.add('activeBtn')
+    }
+    let onColumnChangeFish = (e) => {
+        let n = e.target.value
+        props.tabsSwitcher(n)
+
+        document.getElementById(`tabBtn1`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn3`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn4`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn2`).classList.add('activeBtn')
+    }
+    let onColumnChangeDriving = (e) => {
+        let n = e.target.value
+        props.tabsSwitcher(n)
+
+        document.getElementById(`tabBtn1`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn2`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn4`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn3`).classList.add('activeBtn')
+    }
+    let onColumnChangePc = (e) => {
+        let n = e.target.value
+        props.tabsSwitcher(n)
+
+        document.getElementById(`tabBtn1`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn2`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn3`).classList.remove('activeBtn')
+        document.getElementById(`tabBtn4`).classList.add('activeBtn')
     }
     return (
         <div className='componentContainer'>
-            <button onClick={onColumnChange} value={1}>
-                {props.productData.solarGlass[0].gType}
-            </button>
-            <button onClick={onColumnChange} value={2}>
-                {props.productData.fishingGlass[0].gType}
-            </button>
+            <div className={paCSS.tabsItems}>
+                <button id={'tabBtn1'} className={`${paCSS.tabBtn} neumorph`} onClick={onColumnChangeSolar} value={1}>
+                    {props.productData.solarGlass[0].gType}
+                </button>
+                <button id={'tabBtn2'} className={`${paCSS.tabBtn} neumorph`} onClick={onColumnChangeFish} value={2}>
+                    {props.productData.fishingGlass[0].gType}
+                </button>
+                <button id={'tabBtn3'} className={`${paCSS.tabBtn} neumorph`} onClick={onColumnChangeDriving} value={3}>
+                    {props.productData.drivingGlass[0].gType}
+                </button>
+                <button id={'tabBtn4'} className={`${paCSS.tabBtn} neumorph`} onClick={onColumnChangePc} value={4}>
+                    {props.productData.pcGlass[0].gType}
+                </button>
+            </div>
             {columnCount == 1
-                ? <TabContent glassesList={solarProps}/>
-                : <TabContent glassesList={fishProps}/>
+                ? <TabContent glassesList={solarProps} categoryDescription={solarDesc}/>
+                : columnCount == 2
+                    ? <TabContent glassesList={fishingProps} categoryDescription={fishingDesc}/>
+                    : columnCount == 3
+                        ? <TabContent glassesList={drivingProps} categoryDescription={drivingDesc}/>
+                        : <TabContent glassesList={pcProps} categoryDescription={pcDesc}/>
             }
         </div>
     )

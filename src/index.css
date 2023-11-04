@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f2f2f2;
+  background: linear-gradient(45deg, transparent 30%, #dcdeea 150%);
   padding: 0px 20px;
 }
 
@@ -22,4 +22,15 @@ button svg {
   margin-left: 20px;
   width: 30px;
   height: 30px;
+}
+
+button {
+  border: none;
+  font-size: 20px;
+  color: #555;
+}
+
+.activeBtn {
+  box-shadow:  -5px -5px 5px #dadada,
+  5px 5px 5px #ffffff;
 }

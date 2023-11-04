@@ -6,6 +6,7 @@ import {productTabSwitch} from "../../redux/productStateReducer";
 let mapStateToProps =(state)=> {
     return {
         productData: state.productState.glasses,
+        productDesc: state.productState.glassesCategoryDescription,
         columnCount: state.productState.columnCount
     }
 }
