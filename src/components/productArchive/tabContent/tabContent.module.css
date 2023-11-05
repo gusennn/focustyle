@@ -1,0 +1,73 @@
+.catDescription>* {
+    padding-bottom: 40px;
+}
+
+.glassCardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.glassCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 80px 20px 20px;
+    transition: .2s;
+    width: 100%;
+}
+
+img {
+    max-width: 400px;
+}
+
+.glassCardTitle {
+    margin-bottom: 10px;
+}
+
+.cardAttributes {
+
+}
+
+.cardPrice{
+    margin: 10px 0px;
+    padding-top: 10px;
+    border-top: 3px solid #333;
+}
+
+.cardPrice h6:nth-last-child(1), .cardPrice h6:nth-last-child(2) {
+    display: inline;
+}
+
+.cardPrice h6:nth-last-child(1) {
+    margin-left: 20px;
+    opacity: .4;
+}
+
+.cardButtonsWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 380px) {
+    .cardButtonsWrapper {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 960px) {
+    .glassCard {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (min-width: 1300px) {
+    .glassCard {
+        width: calc(33% - 30px);
+    }
+}

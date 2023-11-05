@@ -1,9 +1,13 @@
-.exampleClass {
+.tabsItems {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.exampleCard {
-    border: 1px solid #000;
+.tabBtn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: transparent;
 }
+
