@@ -1,0 +1,65 @@
+.menu {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+}
+
+.menu__blur {
+  width: 75%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.60);
+}
+
+.menu__content {
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+
+.menu__button {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-left: auto;
+  margin-top: 5px;
+  margin-bottom: 52px;
+  background: url(../../assets/svg/menu_cross.svg) no-repeat center/30px;
+  cursor: pointer;
+}
+
+.menu__list {
+  max-width: 232px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 21px;
+}
+
+.menu__list__item {
+  display: inline-block;
+  margin-bottom: 21px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.menu__list__item:hover {
+  transition: 1s;
+  opacity: 0.5;
+}
+
+.menu__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
