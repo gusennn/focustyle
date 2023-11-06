@@ -16,6 +16,7 @@ let initialState = {
                 gPrice: 22899,
                 gDiscountPercent: 12,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 1,
@@ -48,6 +49,7 @@ let initialState = {
                 gPrice: 25930,
                 gDiscountPercent: 15,
                 isTry: true,
+                isInCart: false,
             },
         ],
         fishingGlass: [
@@ -66,6 +68,7 @@ let initialState = {
                 gPrice: 1450,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 1,
@@ -82,6 +85,7 @@ let initialState = {
                 gPrice: 1550,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 2,
@@ -98,6 +102,7 @@ let initialState = {
                 gPrice: 1550,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
         ],
         drivingGlass: [
@@ -116,6 +121,7 @@ let initialState = {
                 gPrice: 1750,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 1,
@@ -132,6 +138,7 @@ let initialState = {
                 gPrice: 1350,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 2,
@@ -148,6 +155,7 @@ let initialState = {
                 gPrice: 1850,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
         ],
         pcGlass: [
@@ -166,6 +174,7 @@ let initialState = {
                 gPrice: 1950,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 1,
@@ -182,6 +191,7 @@ let initialState = {
                 gPrice: 1850,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 2,
@@ -198,6 +208,7 @@ let initialState = {
                 gPrice: 2850,
                 gDiscountPercent: 10,
                 isTry: true,
+                isInCart: false,
             },
         ],
     },
@@ -251,11 +262,36 @@ export const productTabSwitch = (num) => {
     }
 }
 
+const IS_IN_CART_CHECKER = 'IS-IN-CART-CHECKER'
+export const isInCartToggle = (id) => {
+    return {
+        type: IS_IN_CART_CHECKER, cardId: id
+    }
+}
+
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case PRODUCT_SWITCH: {
             let dataSpread = {...state}
             dataSpread.columnCount = action.numFromAction
+            return dataSpread
+        };
+        case IS_IN_CART_CHECKER: {
+            let dataSpread = {...state}
+            dataSpread.glasses = {...state.glasses}
+            if ( !dataSpread.glasses.solarGlass[action.cardId].isInCart ) {
+                dataSpread.glasses.solarGlass[action.cardId].isInCart = true
+            }
+            if ( !dataSpread.glasses.fishingGlass[action.cardId].isInCart ) {
+                dataSpread.glasses.fishingGlass[action.cardId].isInCart = true
+            }
+            if ( !dataSpread.glasses.drivingGlass[action.cardId].isInCart ) {
+                dataSpread.glasses.drivingGlass[action.cardId].isInCart = true
+            }
+            if ( !dataSpread.glasses.pcGlass[action.cardId].isInCart ) {
+                dataSpread.glasses.pcGlass[action.cardId].isInCart = true
+            }
+            // Меняется во всех 4 категориях, если id совпадает. Надо уточнить ещё в какой категории нажали кнопку
             return dataSpread
         }
         default:

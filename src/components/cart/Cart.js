@@ -1,9 +1,11 @@
 import React from "react";
 
-const Cart =()=> {
+const Cart =(props)=> {
     return (
         <div className='componentContainer'>
-            Cart
+            {props.cartList.map( cl => <div>
+                {cl.cartTitle}
+            </div> )}
         </div>
     )
 }

@@ -3,6 +3,7 @@ import tabsCSS from "./tabContent.module.css";
 import {Button, Typography} from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import AddCartContainer from "../../cart/addCart/AddCartContainer";
 
 function TabContent(props) {
 
@@ -21,6 +22,7 @@ function TabContent(props) {
                      elevation={2}
                      style={{background: `linear-gradient(45deg, transparent 50%, ${g.gLensColorHEX}30 120%) `}}
                      className={`${tabsCSS.glassCard} neumorph`}>
+                    <p>{g.isInCart}</p>
                     <img src={g.gImgUrl} alt={g.gTitle}/>
                     <Typography
                         className={tabsCSS.glassCardTitle}
@@ -41,15 +43,13 @@ function TabContent(props) {
                         <Typography variant={'h6'}><strike>{g.gPrice} ₽ </strike></Typography>
                     </div>
                     <div className={tabsCSS.cardButtonsWrapper}>
-                        <Button color={'dark'} className={'neumorph'}>
-                            <Typography>В корзину</Typography>
-                            <ShoppingCartOutlinedIcon/>
-                        </Button>
+                        <AddCartContainer glassList={glassList} checkCardId={g.id} disableStatus={g.isInCart}/>
                         <Button color={'dark'} className={'neumorph'}>
                             <Typography>Примерить</Typography>
-                            <AutoAwesomeIcon/>
+                            <AutoAwesomeIcon />
                         </Button>
                     </div>
+
                 </div>
             ))}
         </div>

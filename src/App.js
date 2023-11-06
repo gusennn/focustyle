@@ -3,9 +3,9 @@ import React from "react";
 import Header from "./components/header/Header";
 import HomePage from "./components/homePage/HomePage";
 import { Routes, Route } from "react-router-dom";
-import Cart from "./components/cart/Cart";
 import ProductArchiveContainer from "./components/productArchive/ProductArchiveContainer";
 import Footer from "./components/footer/Footer";
+import CartContainer from "./components/cart/CartContainer";
 
 function App() {
     return (
@@ -19,7 +19,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="product" element={<ProductArchiveContainer />} />
-                    <Route path="cart" element={<Cart />} />
+                    <Route path="cart" element={<CartContainer />} />
                 </Routes>
             </div>
 
