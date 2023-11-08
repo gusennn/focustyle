@@ -7,12 +7,12 @@ const HomePage =()=> {
     <div class="wrap">
     <div class="header">
       <nav class="header_nav">
-        <a href="!#"><img src="./img/logo-log.png" alt="" class="logo"></img></a>
+        <a href="!#"><img src="../../assets/svg/logo.svg" alt="" class="logo"></img></a>
         <ul class="header_list">
-          <li class="header_item"><a href="!#"><img src="./img/icon_heart.svg" alt=""></img></a></li>
-          <li class="header_item"><a href="!#"><img src="./img/icon_ basket.svg" alt=""></img></a></li>
-          <li class="header_item"><a href="!#"><img src="./img/icon_user.svg" alt=""></img></a></li>
-          <li class="header_item"><a href="!#"><img src="./img/icon_menu.svg" alt="menu"></img></a></li>
+          <li class="header_item"><a href="!#"><img src="../../assets/svg/" alt=""></img></a></li>
+          <li class="header_item"><a href="!#"><img src="../../assets/svg/" alt=""></img></a></li>
+          <li class="header_item"><a href="!#"><img src="../../assets/svg/" alt=""></img></a></li>
+          <li class="header_item"><a href="!#"><img src="../../assets/svg/" alt="menu"></img></a></li>
         </ul>
       </nav>
     </div>
