@@ -5,7 +5,15 @@ import logoImg from "../../assets/svg/logo.svg";
 
 const Header = ({ array }) => {
 
-    { } //js если надо для кнопки
+    let mobNavOpen = () => {
+        let openMenu = document.querySelector('#showMenu');
+        openMenu.style.cssText = 'top: 0px;'
+    }
+
+    let mobNavClose = () => {
+        let openMenu = document.querySelector('#showMenu');
+        openMenu.style.cssText = 'top: -10000px;'
+    }
 
     return (
         <div className='componentContainer'>
@@ -32,17 +40,24 @@ const Header = ({ array }) => {
                             <span className={styles.header__hidden}>Вход в личный кабинет</span>
                         </NavLink>
                     </li>
-                    {/*{array.map((el) => (
-                        <li>
-                            <NavLink to='/' className={el.class}>
-                                <span className={styles.header__hidden}>{el.value}</span>
-                            </NavLink>
-                        </li>
-                    ))}*/}
-                    <button type="button" className={styles.header__nav__button}>
+                    <button type="button" className={styles.header__nav__button} onClick={mobNavOpen}>
                         <span className={styles.header__hidden}>Открыть меню</span>
                     </button>
                 </ul>
+            </div>
+            <div id={'showMenu'} className={styles.menu}>
+                <div className={styles.menu__content}>
+                    <button type="button" className={styles.menu__button} onClick={mobNavClose}>
+                        <span className={styles.header__hidden}>Закрыть меню</span>
+                    </button>
+                    <ul className={styles.menu__list}>
+                        {array.map((el) => (
+                            <li>
+                                <a href={el.href} className={styles.menu__list__item}>{el.value}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div >
     )
