@@ -8,9 +8,6 @@ const pages = ['products', 'pricing', 'blog'];
 
 const Header = (props) => {
 
-    const theme = useTheme();
-
-
     let mobNavOpen = () => {
         let openMenu = document.querySelector('#showMenu');
         openMenu.style.cssText = 'top: 0px;'
@@ -60,7 +57,6 @@ const Header = (props) => {
                         {pages.map((el) => (
                             <li>
 
-                                {/*<a to={el.href} className={hCSS.menu__list__item}>{el.value}</a>*/}
                                 <NavLink to={`/${el}`} className={hCSS.menu__list__item}>{el}</NavLink>
 
                             </li>
