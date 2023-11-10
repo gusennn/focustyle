@@ -77,3 +77,55 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.menu {
+  width: 100%;
+  height: 100vh;
+  top: -10000px;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.60);
+}
+
+.menu__content {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+
+.menu__button {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-left: auto;
+  margin-top: 5px;
+  margin-bottom: 52px;
+  background: url(../../assets/svg/menu_cross.svg) no-repeat center/30px;
+  cursor: pointer;
+}
+
+.menu__list {
+  max-width: 232px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 21px;
+}
+
+.menu__list__item {
+  display: inline-block;
+  margin-bottom: 21px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.74);
+  text-transform: capitalize;
+}
+
+.menu__list__item:hover {
+  transition: 1s;
+  opacity: 0.5;
+}

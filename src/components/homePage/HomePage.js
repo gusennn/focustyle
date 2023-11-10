@@ -1,7 +1,5 @@
 import React from "react";
 import hpCss from './homePage.module.css'
-import bg from '../../../src/assets/image/background.jpg'
-
 
 const HomePage =()=> {
     return (
