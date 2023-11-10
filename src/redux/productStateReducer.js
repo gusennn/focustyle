@@ -33,6 +33,7 @@ let initialState = {
                 gPrice: 26490,
                 gDiscountPercent: 19,
                 isTry: true,
+                isInCart: false,
             },
             {
                 id: 2,
@@ -291,6 +292,7 @@ const productReducer = (state = initialState, action) => {
             if ( !dataSpread.glasses.pcGlass[action.cardId].isInCart ) {
                 dataSpread.glasses.pcGlass[action.cardId].isInCart = true
             }
+
             // Меняется во всех 4 категориях, если id совпадает. Надо уточнить ещё в какой категории нажали кнопку
             return dataSpread
         }

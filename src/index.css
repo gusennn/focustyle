@@ -10,6 +10,10 @@ body {
   padding: 0px 20px;
 }
 
+#mobNav {
+  position: absolute;
+  display: none;
+}
 
 .neumorph {
   border-radius: 10px;

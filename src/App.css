@@ -10,12 +10,10 @@
 }
 
 .componentRenderArea {
-  min-height: 95vh;
-  margin-bottom: 50px;
+  min-height: 80vh;
+  margin: 50px 0px;
 }
 
-.componentContainer {
+.componentContainer {}
 
-}
-.footer {
-}
+.footer {}

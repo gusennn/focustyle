@@ -55,6 +55,8 @@ const ProductArchive = (props) => {
     }
     return (
         <div className='componentContainer'>
+
+
             <div className={paCSS.tabsItems}>
                 <button id={'tabBtn1'} className={`${paCSS.tabBtn} neumorph`} onClick={onColumnChangeSolar} value={1}>
                     {props.productData.solarGlass[0].gType}
@@ -77,6 +79,18 @@ const ProductArchive = (props) => {
                         ? <TabContent glassesList={drivingProps} categoryDescription={drivingDesc}/>
                         : <TabContent glassesList={pcProps} categoryDescription={pcDesc}/>
             }
+            {props.productData.solarGlass.map( pd => <div>
+                <p>solar: {String(pd.isInCart)}</p>
+            </div>)}
+            {props.productData.fishingGlass.map( pd => <div>
+                <p>fish: {String(pd.isInCart) }</p>
+            </div>)}
+            {props.productData.drivingGlass.map( pd => <div>
+                <p>drive: {String(pd.isInCart)}</p>
+            </div>)}
+            {props.productData.pcGlass.map( pd => <div>
+                <p>pc: {String(pd.isInCart)}</p>
+            </div>)}
         </div>
     )
 }

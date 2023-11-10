@@ -1,0 +1,79 @@
+.header {
+  max-width: 1289px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header .defaultNav {
+  display: flex;
+  gap: 50px;
+}
+
+.header ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.mobNav {}
+
+.header__logo {
+  max-width: 229px;
+}
+
+.header__nav {
+  min-width: 200px;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  list-style: none;
+}
+
+
+.header__nav__item {
+  width: 26px;
+  height: 23px;
+  display: inline-block;
+  margin-right: 37px;
+  cursor: pointer;
+  background: url(../../assets/svg/icon_heart.svg) no-repeat center/22px;
+}
+
+.like {
+  background: url(../../assets/svg/icon_heart.svg) no-repeat center/22px;
+}
+
+.basket {
+  background: url(../../assets/svg/iconBasket.svg) no-repeat center/22px;
+}
+
+.profile {
+  background: url(../../assets/svg/icon_user.svg) no-repeat center/22px;
+}
+
+.header__nav__button {
+  width: 26px;
+  height: 23px;
+  display: inline-block;
+  background: url(../../assets/svg/icon_menu.svg) no-repeat center/cover;
+  cursor: pointer;
+}
+
+.header__nav__item:hover,
+.header__nav__button:hover {
+  transition: 1s;
+  opacity: 0.5;
+}
+
+/*для скринридеров*/
+.header__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
