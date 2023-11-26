@@ -4,7 +4,7 @@ import logoImg from '../../assets/svg/logo.svg'
 import {useTheme} from "@mui/material";
 import {NavLink} from "react-router-dom";
 
-const pages = ['products', 'pricing', 'blog'];
+const pages = ['product', 'pricing', 'blog'];
 
 const Header = (props) => {
 
@@ -34,7 +34,7 @@ const Header = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/' className={`${hCSS.header__nav__item} ${hCSS.basket}`}>
+                        <NavLink to='/cart' className={`${hCSS.header__nav__item} ${hCSS.basket}`}>
                             <span className={hCSS.header__hidden}>Перейти в корзину</span>
                         </NavLink>
                     </li>

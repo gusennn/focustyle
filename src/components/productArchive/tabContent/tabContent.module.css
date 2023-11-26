@@ -1,3 +1,10 @@
+.catDescTitle {
+    font-size: 32px;
+}
+
+.catDescText {
+    font-size: 21px;
+}
 .catDescription>* {
     padding-bottom: 40px;
 }
@@ -19,10 +26,20 @@
     padding: 80px 20px 20px;
     transition: .2s;
     width: 100%;
+    cursor: default;
 }
 
 img {
     max-width: 400px;
+}
+
+.sideAttributes {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.sideAttributes button {
+    width: fit-content;
 }
 
 .glassCardTitle {
@@ -33,10 +50,14 @@ img {
 
 }
 
+.priceText {
+    font-size: 18px;
+}
+
 .cardPrice{
     margin: 10px 0px;
     padding-top: 10px;
-    border-top: 3px solid #333;
+    border-top: 1px solid #333;
 }
 
 .cardPrice h6:nth-last-child(1), .cardPrice h6:nth-last-child(2) {

@@ -11,7 +11,6 @@ function App() {
     const itemsMenu = [{ value: 'О магазине', href: '/' }, { value: 'Контакты', href: '/' }, { value: 'Разработчики проекта', href: '/' }];
     return (
         <div className="App">
-
             <div className='header'>
                 <Header header={'меню бургер'} array={itemsMenu} />
             </div>
@@ -27,7 +26,6 @@ function App() {
             <div className='footer'>
                 <Footer />
             </div>
-            {/*<Menu header={'меню бургер'} array={itemsMenu} />*/}
         </div>
     );
 }
