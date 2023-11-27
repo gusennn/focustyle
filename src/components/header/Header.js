@@ -23,12 +23,18 @@ const Header = (props) => {
 
     let mobNavOpen = () => {
         let openMenu = document.querySelector('#showMenu');
-        openMenu.style.cssText = 'top: 0px;'
+        openMenu.style.cssText = 'left: 0; transition: 1s;'
     }
 
     let mobNavClose = () => {
         let openMenu = document.querySelector('#showMenu');
-        openMenu.style.cssText = 'top: -10000px;'
+        openMenu.style.cssText = 'left: 10000px; transition: 3s;'
+    }
+
+    let clickLinkClose = (evt) => {
+        if (evt.target.classList.contains(hCSS.menu__list__item)) {
+            mobNavClose();
+        }
     }
 
     return (
@@ -66,12 +72,10 @@ const Header = (props) => {
                     <button type="button" className={hCSS.menu__button} onClick={mobNavClose}>
                         <span className={hCSS.header__hidden}>Закрыть меню</span>
                     </button>
-                    <ul className={hCSS.menu__list}>
+                    <ul className={hCSS.menu__list} onClick={clickLinkClose}>
                         {pages.map((el) => (
                             <li>
-
                                 <NavLink to={`/${el.href}`} className={hCSS.menu__list__item}>{el.title}</NavLink>
-
                             </li>
                         ))}
                     </ul>
