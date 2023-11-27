@@ -123,7 +123,6 @@
   margin-bottom: 21px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.74);
-  text-transform: capitalize;
 }
 
 .menu__list__item:hover {
