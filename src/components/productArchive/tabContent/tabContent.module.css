@@ -72,6 +72,7 @@ img {
 .cardButtonsWrapper {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 @media (max-width: 380px) {

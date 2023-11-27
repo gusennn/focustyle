@@ -3,7 +3,7 @@ let initialState = {
         solarGlass: [
             {
                 id: 0,
-                gImgUrl: '../glassesImage/glasses/imgSunny.png',
+                gImgUrl: './glassesImage/glasses/imgSunny.png',
                 gTitle: 'Ray-Ban Aviator Gradient',
                 gGender: 'Unisex',
                 gType: 'Солнцезащитные',
@@ -20,7 +20,7 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: '../glassesImage/glasses/img_sunny2.png',
+                gImgUrl: './glassesImage/glasses/img_sunny2.png',
                 gTitle: 'Versace',
                 gGender: 'Мужские',
                 gType: 'Солнцезащитные',
@@ -37,7 +37,7 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: '../glassesImage/glasses/img_sunny3.png',
+                gImgUrl: './glassesImage/glasses/img_sunny3.png',
                 gTitle: 'Ray-Ban Hexagonal Gunmetal',
                 gGender: 'Unisex',
                 gType: 'Солнцезащитные',
@@ -56,7 +56,7 @@ let initialState = {
         fishingGlass: [
             {
                 id: 0,
-                gImgUrl: '../glassesImage/glasses/img_fishing1.png',
+                gImgUrl: './glassesImage/glasses/img_fishing1.png',
                 gTitle: 'King Trout 6F',
                 gGender: 'Unisex',
                 gType: 'Для рыбалки',
@@ -73,7 +73,7 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: '../glassesImage/glasses/img_fishing2.png',
+                gImgUrl: './glassesImage/glasses/img_fishing2.png',
                 gTitle: 'King Trout 9F',
                 gGender: 'Unisex',
                 gType: 'Для рыбалки',
@@ -90,7 +90,7 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: '../glassesImage/glasses/img_fishing3.png',
+                gImgUrl: './glassesImage/glasses/img_fishing3.png',
                 gTitle: 'King Trout 1F',
                 gGender: 'Unisex',
                 gType: 'Для рыбалки',
@@ -109,7 +109,7 @@ let initialState = {
         drivingGlass: [
             {
                 id: 0,
-                gImgUrl: '../glassesImage/glasses/img_driving1.png',
+                gImgUrl: './glassesImage/glasses/img_driving1.png',
                 gTitle: 'Noteler 002/3P',
                 gGender: 'Unisex',
                 gType: 'Для вождения',
@@ -126,7 +126,7 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: '../glassesImage/glasses/img_driving2.png',
+                gImgUrl: './glassesImage/glasses/img_driving2.png',
                 gTitle: 'Noteler 002/8P',
                 gGender: 'Unisex',
                 gType: 'Для вождения',
@@ -143,7 +143,7 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: '../glassesImage/glasses/img_driving3.png',
+                gImgUrl: './glassesImage/glasses/img_driving3.png',
                 gTitle: 'Noteler 012/3P',
                 gGender: 'Unisex',
                 gType: 'Для вождения',
@@ -162,7 +162,7 @@ let initialState = {
         pcGlass: [
             {
                 id: 0,
-                gImgUrl: '../glassesImage/glasses/img_computer1.png',
+                gImgUrl: './glassesImage/glasses/img_computer1.png',
                 gTitle: 'Carrera 1UF',
                 gGender: 'Unisex',
                 gType: 'Для компьютера',
@@ -179,7 +179,7 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: '../glassesImage/glasses/img_computer2.png',
+                gImgUrl: './glassesImage/glasses/img_computer2.png',
                 gTitle: 'Carrera 2UF',
                 gGender: 'Unisex',
                 gType: 'Для компьютера',
@@ -196,7 +196,7 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: '../glassesImage/glasses/img_computer3.png',
+                gImgUrl: './glassesImage/glasses/img_computer3.png',
                 gTitle: 'Ray-Ban',
                 gGender: 'Unisex',
                 gType: 'Для компьютера',
