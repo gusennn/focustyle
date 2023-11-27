@@ -8,11 +8,10 @@ import Footer from "./components/footer/Footer";
 import CartContainer from "./components/cart/CartContainer";
 
 function App() {
-    const itemsMenu = [{ value: 'О магазине', href: '/' }, { value: 'Контакты', href: '/' }, { value: 'Разработчики проекта', href: '/' }];
     return (
         <div className="App">
             <div className='header'>
-                <Header header={'меню бургер'} array={itemsMenu} />
+                <Header header={'меню бургер'} />
             </div>
 
             <div className='componentRenderArea'>
