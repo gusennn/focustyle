@@ -1,0 +1,11 @@
+.container {
+  max-width: 990px;
+}
+
+.container__title {
+  padding-bottom: 19px;
+}
+
+.container__text {
+  padding-bottom: 20px;
+}

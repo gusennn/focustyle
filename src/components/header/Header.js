@@ -1,13 +1,12 @@
 import React from 'react';
 import hCSS from './header.module.css'
 import logoImg from '../../assets/svg/logo.svg'
-import { useTheme } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const pages = [
     {
-        title: 'Каталог',
-        href: 'product'
+        title: 'О магазине',
+        href: 'about-store'
     },
     {
         title: 'Цены или что то такое',
@@ -23,7 +22,7 @@ const Header = (props) => {
 
     let mobNavOpen = () => {
         let openMenu = document.querySelector('#showMenu');
-        openMenu.style.cssText = 'left: 0; transition: 1s;'
+        openMenu.style.cssText = 'left: 0; transition: 0.7s;'
     }
 
     let mobNavClose = () => {
@@ -58,8 +57,8 @@ const Header = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/' className={`${hCSS.header__nav__item} ${hCSS.profile}`}>
-                            <span className={hCSS.header__hidden}>Вход в личный кабинет</span>
+                        <NavLink to='/product' className={`${hCSS.header__nav__item} ${hCSS.profile}`}>
+                            <span className={hCSS.header__hidden}>Перейти в каталог</span>
                         </NavLink>
                     </li>
                     <button type="button" className={hCSS.header__nav__button} onClick={mobNavOpen}>
