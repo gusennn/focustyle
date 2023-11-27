@@ -7,7 +7,7 @@ let mapStateToProps =(state)=> {
     return {
         productData: state.productState.glasses,
         productDesc: state.productState.glassesCategoryDescription,
-        columnCount: state.productState.columnCount
+        columnCount: state.productState.columnCount,
     }
 }
 

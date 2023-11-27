@@ -59,7 +59,7 @@ let initialState = {
                 gImgUrl: '../glassesImage/glasses/img_fishing1.png',
                 gTitle: 'King Trout 6F',
                 gGender: 'Unisex',
-                gType: 'Рыболовные поляризационные',
+                gType: 'Для рыбалки',
                 gFrameMaterial: 'Пластик',
                 gFrameColor: 'Камуфляж',
                 gLensColorHEX: '#240a34',
@@ -76,7 +76,7 @@ let initialState = {
                 gImgUrl: '../glassesImage/glasses/img_fishing2.png',
                 gTitle: 'King Trout 9F',
                 gGender: 'Unisex',
-                gType: 'Рыболовные поляризационные',
+                gType: 'Для рыбалки',
                 gFrameMaterial: 'Пластик',
                 gFrameColor: 'Черный',
                 gLensColorHEX: '#fee121',
@@ -93,7 +93,7 @@ let initialState = {
                 gImgUrl: '../glassesImage/glasses/img_fishing3.png',
                 gTitle: 'King Trout 1F',
                 gGender: 'Unisex',
-                gType: 'Рыболовные поляризационные',
+                gType: 'Для рыбалки',
                 gFrameMaterial: 'Пластик',
                 gFrameColor: 'Темно-синий',
                 gLensColorHEX: '#051e6a',
@@ -213,43 +213,36 @@ let initialState = {
             },
         ],
     },
+    glassCategoryName: '',
     glassesCategoryDescription: {
         solar: [
             {
                 descTitle: 'Солнцезащитные очки',
-                descText: 'Солнцезащитные очки, представленные на нашем сайте, ' +
-                    'идеально подойдут для защиты ваших глаз от негативного воздействия ультрафиолетовых лучей. ' +
-                    'Мы предлагаем большой выбор моделей для мужчин, женщин и детей, которые отличаются высоким качеством и ' +
-                    'стильным дизайном. Наши солнцезащитные очки вы можете примерить онлайн'
+                descText: 'Солнцезащитные очки, представленные на нашем сайте, идеально подойдут для защиты ваших глаз от негативного воздействия ультрафиолетовых лучей. Мы предлагаем большой выбор моделей для мужчин, женщин и детей, которые отличаются высоким качеством и стильным дизайном. Наши солнцезащитные очки вы можете примерить онлайн \n' +
+                    'для выбора подходящей модели. Ищите специальный значок: '
             },
         ],
         fishing: [
             {
                 descTitle: 'Очки для рыбалки',
-                descText: 'Очки для рыбалки не только защитят ваши глаза от солнца и ветра, но и помогут улучшить видимость в сложных условиях, таких как туман или дождь. Они также имеют стильный дизайн, который подойдет для любого рыболова.' +
-                    'На нашем сайте вы найдете большой выбор очков для рыбалки от ведущих производителей. Также вы можете' +
-                    'примерить модели перед покупкой онлайн'
+                descText: 'Очки для рыбалки не только защитят ваши глаза от солнца и ветра, но и помогут улучшить видимость в сложных условиях, таких как туман или дождь. Они также имеют стильный дизайн, который подойдет для любого рыболова. \n' +
+                    'На нашем сайте вы найдете большой выбор очков для рыбалки от ведущих производителей. Также вы можете \n' +
+                    'примерить модели перед покупкой онлайн, чтобы выбрать наиболее подходящую. Ищите специальный значок: '
             },
         ],
         driving: [
             {
                 descTitle: 'Очки для вождения',
-                descText: 'Очки для вождения - это не только модный аксессуар, но и необходимый элемент безопасности на дороге. ' +
-                    'Они помогают защитить глаза от яркого света, снижают усталость глаз и улучшают контрастность. ' +
-                    'На нашем сайте вы найдете широкий выбор очков для вождения от известных брендов. ' +
-                    'Все наши модели имеют высокое качество и стильный дизайн. Вы можете примерить разные модели онлайн и выбрать ту, ' +
-                    'которая идеально подходит для вас. Не откладывайте свою безопасность на потом - купите очки для вождения уже сегодня!  ' +
-                    'Для онлайн-примерки ищите специальный значок'
+                descText: 'Очки для вождения - это не только модный аксессуар, но и необходимый элемент безопасности ' +
+                    'на дороге. Они помогают защитить глаза от яркого света, снижают усталость глаз и улучшают ' +
+                    'контрастность. На нашем сайте вы найдете широкий выбор очков для вождения от известных брендов. ' +
+                    'Все наши модели имеют высокое качество и стильный дизайн. Вы можете примерить разные модели онлайн и выбрать ту, которая идеально подходит для вас. Не откладывайте свою безопасность на потом - купите очки для вождения уже сегодня!  Для онлайн-примерки ищите специальный значок: '
             },
         ],
         pc: [
             {
                 descTitle: 'Очки для компьютера',
-                descText: 'Очки для работы за компьютером - это не просто модный аксессуар, а необходимый элемент для здоровья ваших глаз. ' +
-                    'Они защищают ваше зрение от усталости и перенапряжения, а также помогают улучшить концентрацию внимания. На нашем сайте ' +
-                    'представлен огромный выбор компьютерных очков от лучших производителей. Вы сможете примерить различные модели и подобрать ту, ' +
-                    'которая подходит именно вам. Не забывайте, что здоровье ваших глаз - это инвестиция в ваше будущее. Купите компьютерные очки и ' +
-                    'наслаждайтесь комфортной работой'
+                descText: 'Очки для работы за компьютером - это не просто модный аксессуар, а необходимый элемент для здоровья ваших глаз. Они защищают ваше зрение от усталости и перенапряжения, а также помогают улучшить концентрацию внимания. На нашем сайте представлен огромный выбор компьютерных очков от лучших производителей. Вы сможете примерить различные модели и подобрать ту, которая подходит именно вам. Не забывайте, что здоровье ваших глаз - это инвестиция в ваше будущее. Купите компьютерные очки и наслаждайтесь комфортной работой! Для онлайн-примерки ищите специальный значок: '
             },
         ],
     },
@@ -263,10 +256,24 @@ export const productTabSwitch = (num) => {
     }
 }
 
+const PRODUCT_CAT_NAME = 'PRODUCT-CAT-NAME'
+export const productCatName = (catName) => {
+    return {
+        type: PRODUCT_CAT_NAME, catFromAction: catName
+    }
+}
+
 const IS_IN_CART_CHECKER = 'IS-IN-CART-CHECKER'
 export const isInCartToggle = (id) => {
     return {
         type: IS_IN_CART_CHECKER, cardId: id
+    }
+}
+
+const GET_CART_ITEM_DELETE = 'GET-CART-ITEM-DELETE'
+export const deleteCartItem = (name, cardId) => {
+    return {
+        type: GET_CART_ITEM_DELETE, deleteItemCatName: name, deleteCardId: cardId
     }
 }
 
@@ -276,24 +283,69 @@ const productReducer = (state = initialState, action) => {
             let dataSpread = {...state}
             dataSpread.columnCount = action.numFromAction
             return dataSpread
-        };
+        }
+            ;
+        case PRODUCT_CAT_NAME: {
+            let dataSpread = {...state}
+            dataSpread.glassCategoryName = action.catFromAction
+            return dataSpread
+        }
+            ;
         case IS_IN_CART_CHECKER: {
             let dataSpread = {...state}
             dataSpread.glasses = {...state.glasses}
-            if ( !dataSpread.glasses.solarGlass[action.cardId].isInCart ) {
-                dataSpread.glasses.solarGlass[action.cardId].isInCart = true
+            let cardId = action.cardId
+            if (dataSpread.glassCategoryName === 'solarGlass') {
+                if (!dataSpread.glasses.solarGlass[cardId].isInCart) {
+                    dataSpread.glasses.solarGlass[cardId].isInCart = true
+                }
+                ;
             }
-            if ( !dataSpread.glasses.fishingGlass[action.cardId].isInCart ) {
-                dataSpread.glasses.fishingGlass[action.cardId].isInCart = true
+            if (dataSpread.glassCategoryName === 'fishingGlass') {
+                if (!dataSpread.glasses.fishingGlass[cardId].isInCart) {
+                    dataSpread.glasses.fishingGlass[cardId].isInCart = true
+                }
+                ;
             }
-            if ( !dataSpread.glasses.drivingGlass[action.cardId].isInCart ) {
-                dataSpread.glasses.drivingGlass[action.cardId].isInCart = true
+            if (dataSpread.glassCategoryName === 'drivingGlass') {
+                if (!dataSpread.glasses.drivingGlass[cardId].isInCart) {
+                    dataSpread.glasses.drivingGlass[cardId].isInCart = true
+                }
+                ;
             }
-            if ( !dataSpread.glasses.pcGlass[action.cardId].isInCart ) {
-                dataSpread.glasses.pcGlass[action.cardId].isInCart = true
+            if (dataSpread.glassCategoryName === 'pcGlass') {
+                if (!dataSpread.glasses.pcGlass[cardId].isInCart) {
+                    dataSpread.glasses.pcGlass[cardId].isInCart = true
+                }
+                ;
             }
-
-            // Меняется во всех 4 категориях, если id совпадает. Надо уточнить ещё в какой категории нажали кнопку
+            return dataSpread
+        }
+        case GET_CART_ITEM_DELETE: {
+            let dataSpread = {...state}
+            dataSpread.glasses = {...state.glasses}
+            let cartName = action.deleteItemCatName
+            let cardId = action.deleteCardId
+            if ( cartName === 'solarGlass') {
+                if (dataSpread.glasses.solarGlass[cardId].isInCart) {
+                    dataSpread.glasses.solarGlass[cardId].isInCart = false
+                }
+            }
+            if ( cartName === 'fishingGlass') {
+                if (dataSpread.glasses.fishingGlass[cardId].isInCart) {
+                    dataSpread.glasses.fishingGlass[cardId].isInCart = false
+                }
+            }
+            if ( cartName === 'drivingGlass') {
+                if (dataSpread.glasses.drivingGlass[cardId].isInCart) {
+                    dataSpread.glasses.drivingGlass[cardId].isInCart = false
+                }
+            }
+            if ( cartName === 'pcGlass') {
+                if (dataSpread.glasses.pcGlass[cardId].isInCart) {
+                    dataSpread.glasses.pcGlass[cardId].isInCart = false
+                }
+            }
             return dataSpread
         }
         default:

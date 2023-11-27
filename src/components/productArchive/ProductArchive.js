@@ -3,6 +3,13 @@ import TabContent from "./tabContent/TabContent";
 import paCSS from './productArchive.module.css'
 
 const ProductArchive = (props) => {
+    let catArr = []
+    let getCatName = (obj) => {
+        for ( let catName of Object.keys(obj) ){
+            catArr.push(catName)
+        }
+    }
+    getCatName(props.productData)
 
     let columnCount = props.columnCount
 
@@ -72,25 +79,13 @@ const ProductArchive = (props) => {
                 </button>
             </div>
             {columnCount == 1
-                ? <TabContent glassesList={solarProps} categoryDescription={solarDesc}/>
+                ? <TabContent glassesList={solarProps} categoryDescription={solarDesc} categoryName={catArr[0]}/>
                 : columnCount == 2
-                    ? <TabContent glassesList={fishingProps} categoryDescription={fishingDesc}/>
+                    ? <TabContent glassesList={fishingProps} categoryDescription={fishingDesc} categoryName={catArr[1]}/>
                     : columnCount == 3
-                        ? <TabContent glassesList={drivingProps} categoryDescription={drivingDesc}/>
-                        : <TabContent glassesList={pcProps} categoryDescription={pcDesc}/>
+                        ? <TabContent glassesList={drivingProps} categoryDescription={drivingDesc} categoryName={catArr[2]}/>
+                        : <TabContent glassesList={pcProps} categoryDescription={pcDesc} categoryName={catArr[3]}/>
             }
-            {props.productData.solarGlass.map( pd => <div>
-                <p>solar: {String(pd.isInCart)}</p>
-            </div>)}
-            {props.productData.fishingGlass.map( pd => <div>
-                <p>fish: {String(pd.isInCart) }</p>
-            </div>)}
-            {props.productData.drivingGlass.map( pd => <div>
-                <p>drive: {String(pd.isInCart)}</p>
-            </div>)}
-            {props.productData.pcGlass.map( pd => <div>
-                <p>pc: {String(pd.isInCart)}</p>
-            </div>)}
         </div>
     )
 }
