@@ -1,9 +1,9 @@
 .header {
   max-width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  font-size: 21px;
 }
 
 .header .defaultNav {
@@ -16,8 +16,6 @@
   padding: 0px;
 }
 
-.mobNav {}
-
 .header__logo {
   max-width: 229px;
 }
@@ -29,7 +27,6 @@
   margin-bottom: auto;
   list-style: none;
 }
-
 
 .header__nav__item {
   width: 26px;
@@ -64,18 +61,6 @@
 .header__nav__button:hover {
   transition: 1s;
   opacity: 0.5;
-}
-
-/*для скринридеров*/
-.header__hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .menu {
@@ -118,9 +103,12 @@
   font-size: 21px;
 }
 
+.menu__list li:not(:last-child) {
+  margin-bottom: 21px;
+}
+
 .menu__list__item {
   display: inline-block;
-  margin-bottom: 21px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.74);
 }
@@ -128,4 +116,16 @@
 .menu__list__item:hover {
   transition: 1s;
   opacity: 0.5;
+}
+
+/*для скринридеров*/
+.header__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
