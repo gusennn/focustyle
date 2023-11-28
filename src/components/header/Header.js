@@ -3,7 +3,7 @@ import hCSS from './header.module.css'
 import logoImg from '../../assets/svg/logo.svg'
 import { NavLink } from "react-router-dom";
 
-const pages = [
+const links = [
     {
         title: 'О магазине',
         href: 'about-store'
@@ -72,7 +72,7 @@ const Header = (props) => {
                         <span className={hCSS.header__hidden}>Закрыть меню</span>
                     </button>
                     <ul className={hCSS.menu__list} onClick={clickLinkClose}>
-                        {pages.map((el) => (
+                        {links.map((el) => (
                             <li>
                                 <NavLink to={`/${el.href}`} className={hCSS.menu__list__item}>{el.title}</NavLink>
                             </li>
