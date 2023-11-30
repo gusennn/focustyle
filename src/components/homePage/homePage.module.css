@@ -1,0 +1,72 @@
+.container__legend {
+  padding-top: 150px;
+  padding-bottom: 280px;
+  background: url(../../assets/image/background2.jpg) no-repeat 0 -150px;
+}
+
+.container__legend__text {
+  max-width: 730px;
+}
+
+.container__title {
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.container__text {
+  padding-bottom: 40px;
+  line-height: normal;
+}
+
+.container__legend__nav {
+  min-width: 256px;
+  display: inline-block;
+  padding: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.74);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: #F2F2F2;
+  box-shadow: -3px -3px 6px 0px #FFF, 3px 3px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container__legend__nav:hover {
+  transition: 1s;
+  background: #e9e9e9;
+}
+
+.container__about {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 120px 0;
+}
+
+.container__about__text {
+  max-width: 990px;
+}
+
+.container__about__nav {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.container__about__nav__text {
+  position: relative;
+}
+
+.container__about__nav__text::after {
+  content: ' ';
+  top: 30%;
+  left: 150px;
+  width: 65px;
+  height: 15px;
+  background: url(../../assets/svg/Arrow.svg) no-repeat 0 0;
+  position: absolute;
+}
+
+.container__about__img {
+  width: 250px;
+  height: 250px;
+}

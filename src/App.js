@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="App">
             <div className='header'>
-                <Header header={'меню бургер'} />
+                <Header />
             </div>
 
             <div className='componentRenderArea'>
