@@ -7,7 +7,7 @@ import glassFitting from '../../assets/image/img_online_glasess.png';
 
 const HomePage = () => {
     return (
-        <div className='componentContainer'>
+        <div className={`componentContainer ${hpCss.HomePageGradient}`}>
             <div className={hpCss.container__legend}>
                 <div className={hpCss.container__legend__text}>
                     <Typography variant={'h3'} className={hpCss.container__title}><strong>очки для всей семьи</strong><br /> с заботой о ваших глазах </Typography>
