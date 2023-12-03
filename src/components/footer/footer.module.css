@@ -21,6 +21,10 @@
   list-style: none;
 }
 
+.menu__list li {
+  width: fit-content;
+}
+
 .menu__list__item,
 .menu__list__social__item {
   color: rgba(0, 0, 0, 0.74);
@@ -38,14 +42,12 @@
 
 .menu__list__social {
   display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 
-.menu__list__social li:not(:last-child) {
-  margin-right: 9px;
-}
-
 .menu__list__social__item {
+  display: block;
   width: 20px;
   height: 20px;
 }
