@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/focustyle-app/static/css/main.67551c6c.css",
+    "main.js": "/focustyle-app/static/js/main.85b4489a.js",
+    "static/js/787.c1112931.chunk.js": "/focustyle-app/static/js/787.c1112931.chunk.js",
+    "static/media/background-clear.png": "/focustyle-app/static/media/background-clear.ad45303d30a37d6de714.png",
+    "static/media/instagram.svg": "/focustyle-app/static/media/instagram.213bcb0bc6e456bf3502.svg",
+    "static/media/vk2.svg": "/focustyle-app/static/media/vk2.788acc3549acd058e7f4.svg",
+    "static/media/telegram.svg": "/focustyle-app/static/media/telegram.33f9531f7f8248287cd4.svg",
+    "static/media/youtube.svg": "/focustyle-app/static/media/youtube.0cd0a945d87949ada684.svg",
+    "static/media/img_online_glasess.png": "/focustyle-app/static/media/img_online_glasess.3c426917ddcba3af45bb.png",
+    "static/media/logo.svg": "/focustyle-app/static/media/logo.cde90640147e71ad022266c591722050.svg",
+    "static/media/glasses.svg": "/focustyle-app/static/media/glasses.d53a65c93155763eff3eb3cafd4736b3.svg",
+    "static/media/shop-svgrepo-com.svg": "/focustyle-app/static/media/shop-svgrepo-com.3db4586a0b1fd6c2c53e.svg",
+    "static/media/icon_heart.svg": "/focustyle-app/static/media/icon_heart.34200609f2b402f49d9f.svg",
+    "static/media/iconBasket.svg": "/focustyle-app/static/media/iconBasket.b7a08c1710faf5e6b8e3568287d242d8.svg",
+    "index.html": "/focustyle-app/index.html",
+    "static/media/plus.svg": "/focustyle-app/static/media/plus.259359f1d364f0bd212f.svg",
+    "static/media/trash.svg": "/focustyle-app/static/media/trash.6c854f645f6ff595f4a330ec01802734.svg",
+    "static/media/menu_cross.svg": "/focustyle-app/static/media/menu_cross.55c64164f0c8f4ff6183.svg",
+    "static/media/Arrow.svg": "/focustyle-app/static/media/Arrow.cfe79767915aaab1a0a0.svg",
+    "static/media/icon_menu.svg": "/focustyle-app/static/media/icon_menu.19d530537cb0c676c2b2.svg",
+    "static/media/minus.svg": "/focustyle-app/static/media/minus.56a31733528583f4af99.svg",
+    "main.67551c6c.css.map": "/focustyle-app/static/css/main.67551c6c.css.map",
+    "main.85b4489a.js.map": "/focustyle-app/static/js/main.85b4489a.js.map",
+    "787.c1112931.chunk.js.map": "/focustyle-app/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67551c6c.css",
+    "static/js/main.85b4489a.js"
+  ]
+}
