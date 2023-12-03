@@ -6,26 +6,32 @@ import { NavLink } from "react-router-dom";
 
 const links = [
     {
+        id: 0,
         title: 'О магазине',
         href: 'about-store'
     },
     {
+        id: 1,
         title: 'Дополнительная гарантия',
         href: ''
     },
     {
+        id: 2,
         title: 'Политика конфиденциальности',
         href: ''
     },
     {
+        id: 3,
         title: 'Помощь',
         href: ''
     },
     {
+        id: 4,
         title: 'Доставка и возврат',
         href: ''
     },
     {
+        id: 5,
         title: 'Оформление заказа',
         href: ''
     },
@@ -33,21 +39,25 @@ const links = [
 
 const socialLinks = [
     {
+        id: 0,
         title: 'инстаграм',
         href: '',
         customClass: 'instagram'
     },
     {
+        id: 1,
         title: 'вконтакте',
         href: '',
         customClass: 'vk'
     },
     {
+        id: 2,
         title: 'телеграм',
         href: '',
         customClass: 'telegram'
     },
     {
+        id: 3,
         title: 'ютуб',
         href: '',
         customClass: 'youtube'
@@ -67,14 +77,14 @@ function Footer(props) {
                 </div>
                 <ul className={hCSS.menu__list}>
                     {links.slice(0, 3).map((el) => (
-                        <li>
+                        <li key={el.id}>
                             <NavLink to={`/${el.href}`} className={hCSS.menu__list__item}>{el.title}</NavLink>
                         </li>
                     ))}
                 </ul>
                 <ul className={hCSS.menu__list}>
                     {links.slice(3, 7).map((el) => (
-                        <li>
+                        <li key={el.id}>
                             <NavLink to={`/${el.href}`} className={hCSS.menu__list__item}>{el.title}</NavLink>
                         </li>
                     ))}
@@ -83,7 +93,7 @@ function Footer(props) {
                     <p className={hCSS.menu__list__title}>Мы в соцсетях</p>
                     <ul className={hCSS.menu__list__social}>
                         {socialLinks.map((el) => (
-                            <li>
+                            <li key={el.id}>
                                 <NavLink to={`/${el.href}`} className={`${hCSS.menu__list__social__item} ${hCSS[el.customClass]}`}><span className={hCSS.footer__hidden}>{el.title}</span></NavLink>
                             </li>
                         ))}

@@ -18,6 +18,8 @@ const links = [
     }
 ];
 
+
+
 const Header = (props) => {
 
     let mobNavOpen = () => {
@@ -73,7 +75,7 @@ const Header = (props) => {
                     </button>
                     <ul className={hCSS.menu__list} onClick={clickLinkClose}>
                         {links.map((el) => (
-                            <li>
+                            <li key={el.href}>
                                 <NavLink to={`/${el.href}`} className={hCSS.menu__list__item}>{el.title}</NavLink>
                             </li>
                         ))}
@@ -82,6 +84,7 @@ const Header = (props) => {
             </div>
         </div>
     )
+
 }
 
 export default Header;

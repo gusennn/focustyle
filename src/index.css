@@ -1,17 +1,15 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*, p, a, strong, span, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 * {
-  font-family: "Open Sans" !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Open Sans" !important;
 }
 
 body {
@@ -41,6 +39,11 @@ body {
 button svg {
   width: 30px;
   height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button,
@@ -73,3 +76,4 @@ button.btn p {
   box-shadow: inset 5px 5px 6px #999,
     inset -5px -5px 6px #ffffff;
 }
+

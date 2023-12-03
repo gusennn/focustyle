@@ -1,8 +1,23 @@
 import React from 'react';
-import {Button, Typography} from "@mui/material";
+import {Button, Modal, Paper, Typography} from "@mui/material";
 import basket from '../../../assets/svg/iconBasket.svg'
 import pa from '../productArchive.module.css'
+import hCSS from "../../header/header.module.css";
+import {NavLink} from "react-router-dom";
+import AddCartModal from "./AddCartModal";
 
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
 
 function AddCart(props) {
     props.getCatName(props.catName)
@@ -16,11 +31,9 @@ function AddCart(props) {
         <div>
             {
                 props.disableStatus ?
-                    <Button disabled={props.disableStatus} color={'dark'} className={`neumorph btn ${pa.addBtn}`} onClick={onCartClick}>
-                        <Typography style={{ fontSize: 18}}>В корзине <img style={{opacity: .5}} src={basket} alt="В корзине"/></Typography>
-                    </Button>
+                        <AddCartModal/>
                     : <Button disabled={props.disableStatus} color={'dark'} className={'neumorph btn'} onClick={onCartClick}>
-                        <Typography style={{ fontSize: 18}}>В корзину <img src={basket} alt="В корзину"/></Typography>
+                        <Typography style={{ fontSize: 18}}>Добавить <img src={basket} alt="В корзину"/></Typography>
                     </Button>
             }
         </div>

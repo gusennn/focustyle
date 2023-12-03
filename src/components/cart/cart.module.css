@@ -5,38 +5,31 @@
 .cartItem {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
     padding: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #888;
 }
 
-.cartItem:last-child {
-    border: none;
-}
+
 
 /* product info ( image and price ) */
-.productInfo {
 
-}
-.cartImageAndPrice {
+.cartImageAndTitle {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
+    justify-content: flex-start;
 }
 
 .cartImage {
-    width: 150px;
-    max-width: 150px;
-}
-
-.cartPrice:before {
+    width: 100%;
 }
 
 .cartImage img {
     width: 100%;
 }
 
-.cartImageAndPrice .cartTitle {
+.cartImageAndTitle .cartTitle {
     display: none;
 }
 
@@ -69,7 +62,8 @@ div.countAndTrashContainer button, button.deleteBtn {
     max-width: 30px;
     height: 30px;
     padding: 10px;
-    background-color: #ddd;
+    background-color: #eaeaea;
+    box-shadow: 0 0 4px #999;
 }
 
 .incBtn {
@@ -94,8 +88,13 @@ div.countAndTrashContainer button, button.deleteBtn {
 
 .totalContainer {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5px;
 }
 .totalItem {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,26 +105,54 @@ div.countAndTrashContainer button, button.deleteBtn {
 }
 .cartCategory {
     display: none;
+    gap: 60px;
 }
 button.deleteBtn {
     background: url(../../assets/svg/trash.svg) no-repeat center;
 }
 
+button.checkoutBtn {
+    font-size: 22px;
+    text-transform: inherit;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    font-weight: 700;
+    color: #000;
+    border-radius: 8px;
+    border: 2px solid #999;
+    background: #eee;
+    box-shadow: 5px 5px 6px #999,
+    -5px -5px 6px #ffffff;
+}
+
 @media screen and ( min-width: 800px ) {
+    .cartImageAndTitle .cartTitle {
+        display: flex;
+        align-items: center;
+    }
+    .cartImage img {
+        width: 100%;
+    }
     .cartItem {
         flex-direction: row;
         align-items: center;
         width: 100%;
         padding: 40px 20px  ;
     }
+    button.checkoutBtn {
+        width: 30%;
+    }
     .cartImageAndPrice {
         align-items: center;
         gap: 40px;
     }
-    .cartImageAndPrice .cartTitle {
-        display: block;
+    .cartTitle {
+        display: flex;
         min-width: 150px;
         width: 150px;
+        align-items: center;
     }
     .titleContainer {
         display: none;
@@ -140,11 +167,8 @@ button.deleteBtn {
     }
 
     /* total info*/
-    .totalContainer {
-        width: 30%;
-        float: right;
-    }
     .totalItem {
+        width: 30%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -152,27 +176,35 @@ button.deleteBtn {
 }
 
 @media screen and ( min-width: 961px ) {
+    .productInfo {
+        width: 50%;
+        flex-grow: 0;
+    }
     .cartCategory {
         display: flex;
         width: 100%;
         padding: 10px 40px;
     }
     .cartCategory h6:nth-child(1){
-        width: 460px;
+        width: 50%;
         padding-left: 90px;
+        flex-grow: 0;
     }
     .cartCategory h6:nth-child(2){
-        width: 100px;
+        width: 80px;
+        flex-grow: 0;
     }
     .cartCategory h6:nth-child(3){
-        width: 175px;
+        flex-grow: 1;
     }
     .cartCategory h6:nth-child(4){
-        text-align: center;
         flex-grow: 1;
     }
     .discountPriceContainer {
         display: block;
-        padding-left: 40px;
+        flex-grow: 0;
+    }
+    .cartPrice {
+        flex-grow: 0;
     }
 }
