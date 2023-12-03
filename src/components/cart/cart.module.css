@@ -91,7 +91,9 @@ div.countAndTrashContainer button, button.deleteBtn {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 .totalItem {
     width: 100%;
@@ -121,7 +123,7 @@ button.checkoutBtn {
     font-weight: 700;
     color: #000;
     border-radius: 8px;
-    border: 2px solid #999;
+    border: 2px solid #c2c2c2;
     background: #eee;
     box-shadow: 5px 5px 6px #999,
     -5px -5px 6px #ffffff;
