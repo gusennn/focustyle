@@ -89,7 +89,7 @@ function Footer(props) {
                         </li>
                     ))}
                 </ul>
-                <div>
+                <div className={hCSS.footer__links}>
                     <p className={hCSS.menu__list__title}>Мы в соцсетях</p>
                     <ul className={hCSS.menu__list__social}>
                         {socialLinks.map((el) => (

@@ -45,7 +45,7 @@
   background: url(../../assets/svg/iconBasket.svg) no-repeat center/22px;
 }
 
-.profile {
+.product {
   background: url(../../assets/svg/shop-svgrepo-com.svg) no-repeat center/25px;
 }
 
@@ -53,7 +53,7 @@
   width: 26px;
   height: 23px;
   display: inline-block;
-  background: url(../../assets/svg/icon_menu.svg) no-repeat center/cover;
+  background: url(../../assets/svg/icon_menu.svg) no-repeat center/25px;
   cursor: pointer;
 }
 
@@ -88,10 +88,10 @@
   width: 40px;
   height: 40px;
   display: inline-block;
-  margin-left: auto;
-  margin-top: 5px;
+  margin-left: 80%;
+  margin-top: 10px;
   margin-bottom: 52px;
-  background: url(../../assets/svg/menu_cross.svg) no-repeat center/30px;
+  background: url(../../assets/svg/menu_cross.svg) no-repeat center/40px;
   cursor: pointer;
 }
 
@@ -128,4 +128,15 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+
+  .header__nav {
+    justify-content: flex-end;
+  }
+
+  .header__nav__item {
+    margin-right: 20px;
+  }
 }

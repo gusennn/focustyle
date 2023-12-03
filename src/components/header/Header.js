@@ -9,11 +9,7 @@ const links = [
         href: 'about-store'
     },
     {
-        title: 'Цены или что то такое',
-        href: 'pricing'
-    },
-    {
-        title: 'Разработчики проекта',
+        title: 'Разработчики',
         href: 'blog'
     }
 ];
@@ -59,7 +55,7 @@ const Header = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/product' className={`${hCSS.header__nav__item} ${hCSS.profile}`}>
+                        <NavLink to='/product' className={`${hCSS.header__nav__item} ${hCSS.product}`}>
                             <span className={hCSS.header__hidden}>Перейти в каталог</span>
                         </NavLink>
                     </li>

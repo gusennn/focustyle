@@ -63,20 +63,20 @@ const Cart = (props) => {
                             </div>
                         )}
                         <div className={cartCSS.totalContainer}>
-                            <div className={cartCSS.totalItem}>
+                            <div className={cartCSS.totalItem} style={{opacity: .5}}>
                                 <Typography variant={'h6'} align={"right"}>
                                     <strong>Итого:</strong>
                                 </Typography>
-                                <Typography align={"right"}>
-                                    {props.totalCartPrice}₽
+                                <Typography align={"right"} variant={'h6'}>
+                                    {props.totalCartPrice} ₽
                                 </Typography>
                             </div>
-                            <div className={cartCSS.totalItem}>
+                            <div className={cartCSS.totalItem} style={{opacity: .5}}>
                                 <Typography variant={'h6'} align={"right"}>
                                     <strong>Скидки:</strong>
                                 </Typography>
-                                <Typography align={"right"} >
-                                    -{props.totalCartPrice - props.totalCartPriceDiscount}₽
+                                <Typography align={"right"} variant={'h6'}>
+                                    -{props.totalCartPrice - props.totalCartPriceDiscount} ₽
                                 </Typography>
                             </div>
                             <div className={cartCSS.totalItem}>
@@ -84,7 +84,7 @@ const Cart = (props) => {
                                     <strong>К оплате:</strong>
                                 </Typography>
                                 <Typography align={"right"} variant={'h6'}>
-                                    {props.totalCartPriceDiscount}₽
+                                    {props.totalCartPriceDiscount} ₽
                                 </Typography>
                             </div>
                             <Button color={'dark'} className={`${cartCSS.checkoutBtn}`}>Оформить заказ</Button>
