@@ -1,7 +1,6 @@
 import React from 'react';
 import hCSS from './footer.module.css'
 import logoImg from '../../assets/svg/logo.svg'
-import { Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const links = [
@@ -67,7 +66,7 @@ const socialLinks = [
 
 function Footer(props) {
     return (
-        <div className='componentContainer'>
+        <div className={`componentContainer ${hCSS.footer__container}`}>
             <div className={hCSS.footer}>
                 <div className={hCSS.footer__logo}>
                     <NavLink to='/'>
