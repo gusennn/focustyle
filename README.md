@@ -1,5 +1,6 @@
-## Разработка и дизайн:
-
-### [Lina](https://github.com/LinaCor)
+## Дизайн:
 ### [Darya]('#')
+
+## Разработка:
+### [Lina](https://github.com/LinaCor)
 ### [Gusen](https://github.com/gusennn)
