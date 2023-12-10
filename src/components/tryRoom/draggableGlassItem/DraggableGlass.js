@@ -1,6 +1,7 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 import dCss from './draggable.module.css'
+import {Typography} from "@mui/material";
 
 class DraggableGlass extends React.Component {
     constructor(props) {
@@ -37,8 +38,15 @@ class DraggableGlass extends React.Component {
                 onDrag={this.handleDrag}
                 onStop={this.handleStop}>
                 <div className={dCss.dragContainer}>
-                    <img className={dCss.tryImage} src={this.state.image} style={{width: `${this.state.imgWidth}px`}}
-                         alt=""/>
+                    {
+                        this.state.image ?
+                            <img className={dCss.tryImage} src={this.state.image} style={{width: `${this.state.imgWidth}px`}}
+                                 alt=""/>
+                            : <Typography style={{width: 200, opacity: .5}}
+                                          variant={'subtitle2'}>
+                                Пока ничего не выбрано, но это можно исправить в Каталоге :)</Typography>
+                    }
+
                     <div className="handle">
                         <svg width="64px" height="64px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                              className={dCss.pointSvg}>
