@@ -3,7 +3,8 @@ let initialState = {
         solarGlass: [
             {
                 id: 0,
-                gImgUrl: './glassesImage/glasses/imgSunny.png',
+                gImgUrl: '../glassesImage/glasses/imgSunny.png',
+                gTryImgUrl: '../glassesImage/profileView/solarProtectProfile/solar1.png',
                 gTitle: 'Ray-Ban Aviator Gradient',
                 gGender: 'Unisex',
                 gType: 'Солнцезащитные',
@@ -20,7 +21,8 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: './glassesImage/glasses/img_sunny2.png',
+                gImgUrl: '../glassesImage/glasses/img_sunny2.png',
+                gTryImgUrl: '../glassesImage/profileView/solarProtectProfile/solar2.png',
                 gTitle: 'Versace',
                 gGender: 'Мужские',
                 gType: 'Солнцезащитные',
@@ -37,7 +39,8 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: './glassesImage/glasses/img_sunny3.png',
+                gImgUrl: '../glassesImage/glasses/img_sunny3.png',
+                gTryImgUrl: '../glassesImage/profileView/solarProtectProfile/solar3.png',
                 gTitle: 'Ray-Ban Hexagonal Gunmetal',
                 gGender: 'Unisex',
                 gType: 'Солнцезащитные',
@@ -56,7 +59,8 @@ let initialState = {
         fishingGlass: [
             {
                 id: 0,
-                gImgUrl: './glassesImage/glasses/img_fishing1.png',
+                gImgUrl: '../glassesImage/glasses/img_fishing1.png',
+                gTryImgUrl: '../glassesImage/profileView/fishingProfile/fish1.png',
                 gTitle: 'King Trout 6F',
                 gGender: 'Unisex',
                 gType: 'Для рыбалки',
@@ -73,7 +77,8 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: './glassesImage/glasses/img_fishing2.png',
+                gImgUrl: '../glassesImage/glasses/img_fishing2.png',
+                gTryImgUrl: '../glassesImage/profileView/fishingProfile/fish2.png',
                 gTitle: 'King Trout 9F',
                 gGender: 'Unisex',
                 gType: 'Для рыбалки',
@@ -90,7 +95,8 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: './glassesImage/glasses/img_fishing3.png',
+                gImgUrl: '../glassesImage/glasses/img_fishing3.png',
+                gTryImgUrl: '../glassesImage/profileView/fishingProfile/fish3.png',
                 gTitle: 'King Trout 1F',
                 gGender: 'Unisex',
                 gType: 'Для рыбалки',
@@ -109,7 +115,8 @@ let initialState = {
         drivingGlass: [
             {
                 id: 0,
-                gImgUrl: './glassesImage/glasses/img_driving1.png',
+                gImgUrl: '../glassesImage/glasses/img_driving1.png',
+                gTryImgUrl: '../glassesImage/profileView/driveProfile/drive1.png',
                 gTitle: 'Noteler 002/3P',
                 gGender: 'Unisex',
                 gType: 'Для вождения',
@@ -126,7 +133,8 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: './glassesImage/glasses/img_driving2.png',
+                gImgUrl: '../glassesImage/glasses/img_driving2.png',
+                gTryImgUrl: '../glassesImage/profileView/driveProfile/drive2.png',
                 gTitle: 'Noteler 002/8P',
                 gGender: 'Unisex',
                 gType: 'Для вождения',
@@ -143,7 +151,8 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: './glassesImage/glasses/img_driving3.png',
+                gImgUrl: '../glassesImage/glasses/img_driving3.png',
+                gTryImgUrl: '../glassesImage/profileView/driveProfile/drive3.png',
                 gTitle: 'Noteler 012/3P',
                 gGender: 'Unisex',
                 gType: 'Для вождения',
@@ -162,7 +171,8 @@ let initialState = {
         pcGlass: [
             {
                 id: 0,
-                gImgUrl: './glassesImage/glasses/img_computer1.png',
+                gImgUrl: '../glassesImage/glasses/img_computer1.png',
+                gTryImgUrl: '../glassesImage/profileView/pcProfile/pc1.png',
                 gTitle: 'Carrera 1UF',
                 gGender: 'Unisex',
                 gType: 'Для компьютера',
@@ -179,7 +189,8 @@ let initialState = {
             },
             {
                 id: 1,
-                gImgUrl: './glassesImage/glasses/img_computer2.png',
+                gImgUrl: '../glassesImage/glasses/img_computer2.png',
+                gTryImgUrl: '../glassesImage/profileView/pcProfile/pc2.png',
                 gTitle: 'Carrera 2UF',
                 gGender: 'Unisex',
                 gType: 'Для компьютера',
@@ -196,7 +207,8 @@ let initialState = {
             },
             {
                 id: 2,
-                gImgUrl: './glassesImage/glasses/img_computer3.png',
+                gImgUrl: '../glassesImage/glasses/img_computer3.png',
+                gTryImgUrl: '../glassesImage/profileView/pcProfile/pc3.png',
                 gTitle: 'Ray-Ban',
                 gGender: 'Unisex',
                 gType: 'Для компьютера',
@@ -246,7 +258,8 @@ let initialState = {
             },
         ],
     },
-    columnCount: 1,
+    columnCount: 0,
+    tryImageURL: '',
 }
 
 const PRODUCT_SWITCH = 'PRODUCT-SWITCH'
@@ -262,6 +275,16 @@ export const productCatName = (catName) => {
         type: PRODUCT_CAT_NAME, catFromAction: catName
     }
 }
+
+// GLASS TRY
+const PRODUCT_TRY = 'PRODUCT-TRY'
+export const productIdTry = (id, catName) => {
+    return {
+        type: PRODUCT_TRY, cardId: id, catTryAction: catName
+    }
+}
+// GLASS TRY END
+
 
 const IS_IN_CART_CHECKER = 'IS-IN-CART-CHECKER'
 export const isInCartToggle = (id) => {
@@ -279,18 +302,34 @@ export const deleteCartItem = (name, cardId) => {
 
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
+        case PRODUCT_TRY: {
+            let dataSpread = {...state}
+            dataSpread.glasses = {...state.glasses}
+            let cardId = action.cardId
+            if (action.catTryAction === 'solarGlass') {
+                dataSpread.tryImageURL = dataSpread.glasses.solarGlass[cardId].gTryImgUrl
+            }
+            if (action.catTryAction === 'fishingGlass') {
+                dataSpread.tryImageURL = dataSpread.glasses.fishingGlass[cardId].gTryImgUrl
+            }
+            if (action.catTryAction === 'drivingGlass') {
+                dataSpread.tryImageURL = dataSpread.glasses.drivingGlass[cardId].gTryImgUrl
+            }
+            if (action.catTryAction === 'pcGlass') {
+                dataSpread.tryImageURL = dataSpread.glasses.pcGlass[cardId].gTryImgUrl
+            }
+            return dataSpread
+        }
         case PRODUCT_SWITCH: {
             let dataSpread = {...state}
             dataSpread.columnCount = action.numFromAction
             return dataSpread
         }
-            ;
         case PRODUCT_CAT_NAME: {
             let dataSpread = {...state}
             dataSpread.glassCategoryName = action.catFromAction
             return dataSpread
         }
-            ;
         case IS_IN_CART_CHECKER: {
             let dataSpread = {...state}
             dataSpread.glasses = {...state.glasses}
@@ -299,25 +338,21 @@ const productReducer = (state = initialState, action) => {
                 if (!dataSpread.glasses.solarGlass[cardId].isInCart) {
                     dataSpread.glasses.solarGlass[cardId].isInCart = true
                 }
-                ;
             }
             if (dataSpread.glassCategoryName === 'fishingGlass') {
                 if (!dataSpread.glasses.fishingGlass[cardId].isInCart) {
                     dataSpread.glasses.fishingGlass[cardId].isInCart = true
                 }
-                ;
             }
             if (dataSpread.glassCategoryName === 'drivingGlass') {
                 if (!dataSpread.glasses.drivingGlass[cardId].isInCart) {
                     dataSpread.glasses.drivingGlass[cardId].isInCart = true
                 }
-                ;
             }
             if (dataSpread.glassCategoryName === 'pcGlass') {
                 if (!dataSpread.glasses.pcGlass[cardId].isInCart) {
                     dataSpread.glasses.pcGlass[cardId].isInCart = true
                 }
-                ;
             }
             return dataSpread
         }

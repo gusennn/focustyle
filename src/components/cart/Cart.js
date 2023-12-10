@@ -93,7 +93,7 @@ const Cart = (props) => {
                 </div>
 
                 : <div>
-                    <Typography variant={'h4'} className={'componentContainerTitle'}>Корзина заказов пуста. Вы можете выбрать для себя что-либо в нашем каталоге :)</Typography>
+                    <Typography variant={'h6'} className={'componentContainerTitle'}>Корзина заказов пуста. Вы можете выбрать для себя что-либо в нашем каталоге :)</Typography>
                     <NavLink to='/product' className={hpCss.container__legend__nav}><Typography variant={'h6'} style={{ lineHeight: "18px" }}>Перейти в каталог </Typography></NavLink>
                 </div>
             }

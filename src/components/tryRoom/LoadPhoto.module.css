@@ -1,0 +1,40 @@
+.userMain {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.userPhotoBox {
+    width: 100%;
+
+    max-height: 500px;
+    border: 1px solid #888;
+    border-radius: 10px;
+}
+
+.userImg {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.uploadBtn {
+    margin-top: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+@media screen and (min-width: 800px){
+    .userImg {
+       height: 500px;
+    }
+}

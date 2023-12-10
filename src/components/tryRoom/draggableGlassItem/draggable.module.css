@@ -1,0 +1,59 @@
+.dragContainer {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    position: absolute;
+    z-index: 10;
+}
+
+.tryImage {
+    cursor: move;
+}
+
+.tryImage + div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-left: 10px;
+}
+
+svg.pointSvg {
+    width: 24px;
+    height: 24px;
+}
+.controls {
+    position: relative;
+    z-index: 10;
+}
+.glassControls {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translate(-35px, 70px);
+    opacity: .7;
+    background: rgba( 255, 255, 255, 0.6 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 1 );
+    border-radius: 10px;
+}
+
+.glassControls button {
+    width: 35px;
+    border-radius: 10px;
+}
+.glassControls button:active {
+    background-color: #fff;
+}
+
+.incBtn {
+    background: url(../../../assets/svg/plus.svg) no-repeat center;
+}
+.decBtn {
+    background: url(../../../assets/svg/minus.svg) no-repeat center;
+}
