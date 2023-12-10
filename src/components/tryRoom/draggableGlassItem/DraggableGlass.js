@@ -55,10 +55,10 @@ class DraggableGlass extends React.Component {
                                     d="M7.463.057A.748.748 0 007.22.22l-2 2a.75.75 0 001.06 1.06L7 2.56V7H2.56l.72-.72a.75.75 0 00-1.06-1.06l-2 2a.748.748 0 000 1.06l2 2a.75.75 0 101.06-1.06l-.72-.72H7v4.44l-.72-.72a.75.75 0 00-1.06 1.06l2 2a.748.748 0 001.06 0l2-2a.75.75 0 10-1.06-1.06l-.72.72V8.5h4.44l-.72.72a.75.75 0 101.06 1.06l2-2a.748.748 0 000-1.06l-2-2a.75.75 0 10-1.06 1.06l.72.72H8.5V2.56l.72.72a.75.75 0 101.06-1.06l-2-2a.748.748 0 00-.817-.163z"></path>
                             </g>
                         </svg>
-                        <div className={`${dCss.glassControls}`}>
-                            <button className={`btn ${dCss.incBtn}`} onClick={this.onImageIncrementSize}></button>
-                            <button className={`btn ${dCss.decBtn}`} onClick={this.onImageDecrementSize}></button>
-                        </div>
+                    </div>
+                    <div className={`${dCss.glassControls}`}>
+                        <button className={`btn ${dCss.incBtn}`} onClick={this.onImageIncrementSize}></button>
+                        <button className={`btn ${dCss.decBtn}`} onClick={this.onImageDecrementSize}></button>
                     </div>
                 </div>
             </Draggable>

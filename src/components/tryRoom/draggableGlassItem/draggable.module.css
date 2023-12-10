@@ -19,7 +19,6 @@
     position: relative;
     width: 35px;
     top: 40px;
-    gap: 20px;
 }
 
 svg.pointSvg {
@@ -41,7 +40,9 @@ svg.pointSvg {
 .glassControls {
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 90px;
     opacity: .7;
     background: rgba( 255, 255, 255, 0.6 );
     backdrop-filter: blur( 4px );

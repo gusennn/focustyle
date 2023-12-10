@@ -22,7 +22,7 @@ const Try = (props) => {
                     className={'neumorph'}
                     style={{borderRadius: 8}}
                 >
-                    <Typography>Как примерить очки ?</Typography>
+                    <Typography>Шаг 1. Выбрать очки</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography variant={'h6'}></Typography>
@@ -48,7 +48,7 @@ const Try = (props) => {
                     className={'neumorph'}
                     style={{borderRadius: 8}}
                 >
-                    <Typography>Пора добавить своё фото</Typography>
+                    <Typography>Шаг 2. Добавить своё фото</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography variant={"subtitle1"}>- Выберите фото, нажав на кнопку Моё фото</Typography>
