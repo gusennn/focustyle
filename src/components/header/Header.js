@@ -45,7 +45,7 @@ const Header = (props) => {
                 </div>
                 <ul className={hCSS.header__nav}>
                     <li>
-                        <NavLink to='/' className={`${hCSS.header__nav__item} ${hCSS.like}`}>
+                        <NavLink to='/likes' className={`${hCSS.header__nav__item} ${hCSS.like}`}>
                             <span className={hCSS.header__hidden}>Перейти в сохраненные товары</span>
                         </NavLink>
                     </li>
