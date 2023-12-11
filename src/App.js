@@ -8,6 +8,7 @@ import ProductArchiveContainer from "./components/productArchive/ProductArchiveC
 import Footer from "./components/footer/Footer";
 import CartContainer from "./components/cart/CartContainer";
 import TryContainer from "./components/tryRoom/TryContainer";
+import Likes from "./components/likes/Likes"
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="product" element={<ProductArchiveContainer />} />
                     <Route path="cart" element={<CartContainer />} />
                     <Route path="try" element={<TryContainer />} />
+                    <Route path="likes" element={<Likes />} />
                 </Routes>
             </div>
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import tabsCSS from "./tabContent.module.css";
-import {Button, Typography} from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import AddCartContainer from "../addCart/AddCartContainer";
-import glassIcon from '../../../assets/svg/glasses.svg'
-import {NavLink} from "react-router-dom";
+import glassIcon from '../../../assets/svg/glasses.svg';
+import likeIcon from '../../../assets/svg/icon_heart.svg'
+import { NavLink } from "react-router-dom";
 
 let TabContent = (props) => {
     let glassList = props.glassesList
@@ -20,19 +21,20 @@ let TabContent = (props) => {
                 {categoryDescription.map(cd => <div key={cd.descTitle} className={tabsCSS.catDescription}>
                     <Typography className={tabsCSS.catDescTitle} variant={'h4'}>{cd.descTitle}</Typography>
                     <Typography className={tabsCSS.catDescText} variant={'h6'}>{cd.descText} <img src={glassIcon}
-                                                                                                  alt="Примерка"/>
+                        alt="Примерка" />
                     </Typography>
                 </div>)}
             </div>
             <div className={tabsCSS.glassCardWrapper}>
                 {glassList.map((g) => (
                     <div key={g.id}
-                         variant={"elevation"}
-                         elevation={2}
-                         className={`${tabsCSS.glassCard} neumorph`}>
-                        <img src={g.gImgUrl} alt={g.gTitle}/>
+                        variant={"elevation"}
+                        elevation={2}
+                        className={`${tabsCSS.glassCard} neumorph`}>
+                        <img src={g.gImgUrl} alt={g.gTitle} />
                         <div className={tabsCSS.sideAttributes}>
-                            <button><img src={glassIcon} alt="Примерка"/></button>
+                            <button><img src={glassIcon} alt="Примерка" /></button>
+                            <button><img src={likeIcon} alt="Избранное" style={{ width: "22px", height: "22px", cursor: "pointer" }} /></button>
                         </div>
                         <Typography
                             className={tabsCSS.glassCardTitle}
@@ -56,10 +58,10 @@ let TabContent = (props) => {
                         </div>
                         <div className={tabsCSS.cardButtonsWrapper}>
                             <AddCartContainer catName={props.categoryName} glassList={glassList} checkCardId={g.id}
-                                              disableStatus={g.isInCart}/>
+                                disableStatus={g.isInCart} />
                             <button color={'dark'} className={'neumorph btn'} onClick={onTryClick} value={g.id}>
                                 <NavLink to={'/try'}>
-                                    <Typography>Надеть <img src={glassIcon} alt="Примерка"/> </Typography>
+                                    <Typography>Надеть <img src={glassIcon} alt="Примерка" /> </Typography>
                                 </NavLink>
                             </button>
                         </div>

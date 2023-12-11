@@ -5,6 +5,7 @@
 .catDescText {
     font-size: 21px;
 }
+
 .catDescription>* {
     padding-bottom: 40px;
 }
@@ -35,10 +36,12 @@ img {
 }
 
 .sideAttributes {
+    display: flex;
     position: absolute;
     right: 20px;
     top: 20px;
 }
+
 .sideAttributes button {
     width: fit-content;
 }
@@ -55,13 +58,14 @@ img {
     font-size: 18px;
 }
 
-.cardPrice{
+.cardPrice {
     margin: 10px 0px;
     padding-top: 10px;
     border-top: 1px solid #333;
 }
 
-.cardPrice h6:nth-last-child(1), .cardPrice h6:nth-last-child(2) {
+.cardPrice h6:nth-last-child(1),
+.cardPrice h6:nth-last-child(2) {
     display: inline;
 }
 
