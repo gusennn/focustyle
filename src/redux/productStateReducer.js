@@ -18,6 +18,7 @@ let initialState = {
                 gDiscountPercent: 12,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 1,
@@ -36,6 +37,7 @@ let initialState = {
                 gDiscountPercent: 19,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 2,
@@ -54,6 +56,7 @@ let initialState = {
                 gDiscountPercent: 15,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
         ],
         fishingGlass: [
@@ -74,6 +77,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 1,
@@ -92,6 +96,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 2,
@@ -110,6 +115,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
         ],
         drivingGlass: [
@@ -130,6 +136,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 1,
@@ -148,6 +155,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 2,
@@ -166,6 +174,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
         ],
         pcGlass: [
@@ -186,6 +195,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 1,
@@ -204,6 +214,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
             {
                 id: 2,
@@ -222,6 +233,7 @@ let initialState = {
                 gDiscountPercent: 10,
                 isTry: true,
                 isInCart: false,
+                isFavorit: false,
             },
         ],
     },
@@ -303,8 +315,8 @@ export const deleteCartItem = (name, cardId) => {
 const productReducer = (state = initialState, action) => {
     switch (action.type) {
         case PRODUCT_TRY: {
-            let dataSpread = {...state}
-            dataSpread.glasses = {...state.glasses}
+            let dataSpread = { ...state }
+            dataSpread.glasses = { ...state.glasses }
             let cardId = action.cardId
             if (action.catTryAction === 'solarGlass') {
                 dataSpread.tryImageURL = dataSpread.glasses.solarGlass[cardId].gTryImgUrl
@@ -321,18 +333,18 @@ const productReducer = (state = initialState, action) => {
             return dataSpread
         }
         case PRODUCT_SWITCH: {
-            let dataSpread = {...state}
+            let dataSpread = { ...state }
             dataSpread.columnCount = action.numFromAction
             return dataSpread
         }
         case PRODUCT_CAT_NAME: {
-            let dataSpread = {...state}
+            let dataSpread = { ...state }
             dataSpread.glassCategoryName = action.catFromAction
             return dataSpread
         }
         case IS_IN_CART_CHECKER: {
-            let dataSpread = {...state}
-            dataSpread.glasses = {...state.glasses}
+            let dataSpread = { ...state }
+            dataSpread.glasses = { ...state.glasses }
             let cardId = action.cardId
             if (dataSpread.glassCategoryName === 'solarGlass') {
                 if (!dataSpread.glasses.solarGlass[cardId].isInCart) {
@@ -357,26 +369,26 @@ const productReducer = (state = initialState, action) => {
             return dataSpread
         }
         case GET_CART_ITEM_DELETE: {
-            let dataSpread = {...state}
-            dataSpread.glasses = {...state.glasses}
+            let dataSpread = { ...state }
+            dataSpread.glasses = { ...state.glasses }
             let cartName = action.deleteItemCatName
             let cardId = action.deleteCardId
-            if ( cartName === 'solarGlass') {
+            if (cartName === 'solarGlass') {
                 if (dataSpread.glasses.solarGlass[cardId].isInCart) {
                     dataSpread.glasses.solarGlass[cardId].isInCart = false
                 }
             }
-            if ( cartName === 'fishingGlass') {
+            if (cartName === 'fishingGlass') {
                 if (dataSpread.glasses.fishingGlass[cardId].isInCart) {
                     dataSpread.glasses.fishingGlass[cardId].isInCart = false
                 }
             }
-            if ( cartName === 'drivingGlass') {
+            if (cartName === 'drivingGlass') {
                 if (dataSpread.glasses.drivingGlass[cardId].isInCart) {
                     dataSpread.glasses.drivingGlass[cardId].isInCart = false
                 }
             }
-            if ( cartName === 'pcGlass') {
+            if (cartName === 'pcGlass') {
                 if (dataSpread.glasses.pcGlass[cardId].isInCart) {
                     dataSpread.glasses.pcGlass[cardId].isInCart = false
                 }

@@ -2,8 +2,8 @@ import React from 'react';
 import tabsCSS from "./tabContent.module.css";
 import { Button, Typography } from "@mui/material";
 import AddCartContainer from "../addCart/AddCartContainer";
+import AddCartContainerLike from "../../likes/addCartLike/AddCartLikeContainer";
 import glassIcon from '../../../assets/svg/glasses.svg';
-import likeIcon from '../../../assets/svg/icon_heart.svg'
 import { NavLink } from "react-router-dom";
 
 let TabContent = (props) => {
@@ -34,7 +34,8 @@ let TabContent = (props) => {
                         <img src={g.gImgUrl} alt={g.gTitle} />
                         <div className={tabsCSS.sideAttributes}>
                             <button><img src={glassIcon} alt="Примерка" /></button>
-                            <button><img src={likeIcon} alt="Избранное" style={{ width: "22px", height: "22px", cursor: "pointer" }} /></button>
+                            <AddCartContainerLike catName={props.categoryName} glassList={glassList} checkCardId={g.id}
+                                disableStatus={g.isFavorit} />
                         </div>
                         <Typography
                             className={tabsCSS.glassCardTitle}
