@@ -15,7 +15,6 @@ let mapDispatchToProps =(dispatch)=> {
     return {
         tabsSwitcher: (num)=>{dispatch(productTabSwitch(num))},
         getTryId: (id, catName)=>{dispatch(productIdTry(id, catName))},
-
     }
     debugger
 }

@@ -28,7 +28,6 @@ const ProductArchive = (props) => {
                 tabsSwitcher={props.tabsSwitcher}
                 columnCount={columnCount}
                 getTryId={props.getTryId}
-                addFavorAction={props.addFavorAction}
                 solarProps={solarProps}
                 fishingProps={fishingProps}
                 drivingProps={drivingProps}

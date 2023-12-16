@@ -281,7 +281,6 @@ export const productTabSwitch = (num) => {
     }
 }
 
-// FAVOR
 
 
 const PRODUCT_CAT_NAME = 'PRODUCT-CAT-NAME'

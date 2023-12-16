@@ -73,27 +73,27 @@ export default function ScrollableTabsButtonAuto(props) {
             </Tabs>
             {props.columnCount == 0
                 ? <TabContent glassesList={props.solarProps}
-                              addFavorAction={props.addFavorAction}
+
                               categoryDescription={props.solarDesc}
                               categoryName={catArr[0]}
                               getTryId={props.getTryId}
                               getCatNameTry={props.getCatNameTry}/>
                 : props.columnCount == 1
                     ? <TabContent glassesList={props.fishingProps}
-                                  addFavorAction={props.addFavorAction}
+
                                   categoryDescription={props.fishingDesc}
                                   categoryName={catArr[1]}
                                   getTryId={props.getTryId}
                                   getCatNameTry={props.getCatNameTry}/>
                     : props.columnCount == 2
                         ? <TabContent glassesList={props.drivingProps}
-                                      addFavorAction={props.addFavorAction}
+
                                       categoryDescription={props.drivingDesc}
                                       categoryName={catArr[2]}
                                       getTryId={props.getTryId}
                                       getCatNameTry={props.getCatNameTry}/>
                         : <TabContent glassesList={props.pcProps}
-                                      addFavorAction={props.addFavorAction}
+
                                       categoryDescription={props.pcDesc}
                                       categoryName={catArr[3]}
                                       getTryId={props.getTryId}
