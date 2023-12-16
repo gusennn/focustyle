@@ -1,7 +1,4 @@
 import React from "react";
-import TabContent from "./tabContent/TabContent";
-import paCSS from './productArchive.module.css'
-import Tabs from "./Tabs";
 import ScrollableTabsButtonAuto from "./Tabs";
 
 const ProductArchive = (props) => {
@@ -22,7 +19,6 @@ const ProductArchive = (props) => {
 
     return (
         <div className='componentContainer'>
-
             <ScrollableTabsButtonAuto
                 productData={props.productData}
                 solarType={props.productData.solarGlass[0].gType}
@@ -32,6 +28,7 @@ const ProductArchive = (props) => {
                 tabsSwitcher={props.tabsSwitcher}
                 columnCount={columnCount}
                 getTryId={props.getTryId}
+                addFavorAction={props.addFavorAction}
                 solarProps={solarProps}
                 fishingProps={fishingProps}
                 drivingProps={drivingProps}

@@ -23,7 +23,7 @@ const HomePage = () => {
                     <NavLink to='/about-store' className={hpCss.container__about__nav}><Typography variant={'h6'} className={hpCss.container__about__nav__text}><strong>Узнать больше</strong></Typography></NavLink>
                 </div>
                 <div className={hpCss.container__about__img}>
-                    <NavLink to='/'><img src={glassFitting} alt="Примерка" style={{ width: "100%", height: "100%" }} /></NavLink>
+                    <NavLink to='/try'><img src={glassFitting} alt="Примерка" style={{ width: "100%", height: "100%" }} /></NavLink>
                 </div>
             </div>
         </div>

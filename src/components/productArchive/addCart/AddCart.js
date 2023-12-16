@@ -1,9 +1,9 @@
 import React from 'react';
-import {Button, Modal, Paper, Typography} from "@mui/material";
+import { Button, Modal, Paper, Typography } from "@mui/material";
 import basket from '../../../assets/svg/iconBasket.svg'
 import pa from '../productArchive.module.css'
 import hCSS from "../../header/header.module.css";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AddCartModal from "./AddCartModal";
 
 
@@ -31,9 +31,9 @@ function AddCart(props) {
         <div>
             {
                 props.disableStatus ?
-                        <AddCartModal/>
+                    <AddCartModal />
                     : <Button disabled={props.disableStatus} color={'dark'} className={'neumorph btn'} onClick={onCartClick}>
-                        <Typography style={{ fontSize: 18}}>Добавить <img src={basket} alt="В корзину"/></Typography>
+                        <Typography style={{ fontSize: 18 }}>Добавить <img src={basket} alt="В корзину" /></Typography>
                     </Button>
             }
         </div>

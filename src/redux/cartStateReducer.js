@@ -1,8 +1,7 @@
 import cart from "../components/cart/Cart";
 
 let initialState = {
-    cartList: [
-    ],
+    cartList: [],
     cartItemsCounter: 0,
     totalCartPrice: 0,
     totalCartPriceDiscount: 0,
@@ -16,36 +15,36 @@ export const cartState = (selectCardData, name) => {
 }
 
 const CART_ITEM_INCREMENT = 'CART-ITEM-INCREMENT'
-export const cartItemStateInc = (id)=> {
+export const cartItemStateInc = (id) => {
     return {
         type: CART_ITEM_INCREMENT, cartItemId: id
     }
 }
 const CART_ITEM_DECREMENT = 'CART-ITEM-DECREMENT'
-export const cartItemStateDec = (id)=> {
+export const cartItemStateDec = (id) => {
     return {
         type: CART_ITEM_DECREMENT, cartItemId: id
     }
 }
 const CART_ITEM_DELETE = 'CART-ITEM-DELETE'
-export const cartItemDelete = (id)=> {
+export const cartItemDelete = (id) => {
     return {
         type: CART_ITEM_DELETE, cartItemIds: id
     }
 }
 
 const CART_CAT_CHECK = 'CART-CAT-CHECK'
-export const cartGetCatName = (name)=> {
+export const cartGetCatName = (name) => {
     return {
         type: CART_CAT_CHECK, catName: name
     }
 }
 
-const  cartReducer = ( state = initialState, action) => {
+const cartReducer = (state = initialState, action) => {
     switch (action.type) {
         case CART_STATE: {
             let selectCardDataInCart = action.addSelectCard
-            let dataSpread = {...state}
+            let dataSpread = { ...state }
             dataSpread.cartList = [...state.cartList]
             let cartItem = {
                 id: dataSpread.cartItemsCounter,
@@ -63,27 +62,27 @@ const  cartReducer = ( state = initialState, action) => {
             let itemId = cartItem.id
             dataSpread.totalCartPrice += dataSpread.cartList[itemId].itemCountInCart * dataSpread.cartList[itemId].cartPrice
             dataSpread.totalCartPriceDiscount += Math.round(dataSpread.cartList[itemId].cartPrice - (dataSpread.cartList[itemId].cartPrice * dataSpread.cartList[itemId].cartDiscountPercent) / 100)
-            return  dataSpread
+            return dataSpread
         };
         case CART_ITEM_INCREMENT: {
-            let dataSpread = {...state}
+            let dataSpread = { ...state }
             dataSpread.cartList = [...state.cartList]
             let itemId = action.cartItemId
-            dataSpread.cartList[itemId].itemCountInCart ++
-            if ( dataSpread.cartList[itemId].itemCountInCart > 1) {
+            dataSpread.cartList[itemId].itemCountInCart++
+            if (dataSpread.cartList[itemId].itemCountInCart > 1) {
                 dataSpread.totalCartPrice += dataSpread.cartList[itemId].cartPrice
                 dataSpread.totalCartPriceDiscount += Math.round(dataSpread.cartList[itemId].cartPrice - (dataSpread.cartList[itemId].cartPrice * dataSpread.cartList[itemId].cartDiscountPercent) / 100)
             }
             return dataSpread
         }
         case CART_ITEM_DECREMENT: {
-            let dataSpread = {...state}
+            let dataSpread = { ...state }
             dataSpread.cartList = [...state.cartList]
             let itemId = action.cartItemId
-            if ( dataSpread.cartList[itemId].itemCountInCart > 1) {
+            if (dataSpread.cartList[itemId].itemCountInCart > 1) {
                 dataSpread.totalCartPrice -= dataSpread.cartList[itemId].cartPrice
                 dataSpread.totalCartPriceDiscount -= Math.round(dataSpread.cartList[itemId].cartPrice - (dataSpread.cartList[itemId].cartPrice * dataSpread.cartList[itemId].cartDiscountPercent) / 100)
-                dataSpread.cartList[itemId].itemCountInCart --
+                dataSpread.cartList[itemId].itemCountInCart--
             } else {
                 dataSpread.cartList[itemId].itemCountInCart = 1
                 dataSpread.cartList[itemId].isInCart = false
@@ -91,7 +90,7 @@ const  cartReducer = ( state = initialState, action) => {
             return dataSpread
         }
         case CART_ITEM_DELETE: {
-            let dataSpread = {...state}
+            let dataSpread = { ...state }
             dataSpread.cartList = [...state.cartList]
             let deleteId = action.cartItemIds
             dataSpread.totalCartPrice -= dataSpread.cartList[deleteId].itemCountInCart * dataSpread.cartList[deleteId].cartPrice

@@ -2,7 +2,7 @@ import React from 'react';
 import tabsCSS from "./tabContent.module.css";
 import {Button, Typography} from "@mui/material";
 import AddCartContainer from "../addCart/AddCartContainer";
-import glassIcon from '../../../assets/svg/glasses.svg'
+import glassIcon from '../../../assets/svg/glasses.svg';
 import {NavLink} from "react-router-dom";
 
 let TabContent = (props) => {
@@ -12,6 +12,11 @@ let TabContent = (props) => {
     let onTryClick = (e) => {
         let id = e.currentTarget.value
         props.getTryId(id, props.categoryName)
+    }
+
+    let onLikeClick =(e)=> {
+        let id = e.currentTarget.value
+        props.addFavorAction(id, props.categoryName)
     }
 
     return (
@@ -33,6 +38,7 @@ let TabContent = (props) => {
                         <img src={g.gImgUrl} alt={g.gTitle}/>
                         <div className={tabsCSS.sideAttributes}>
                             <button><img src={glassIcon} alt="Примерка"/></button>
+
                         </div>
                         <Typography
                             className={tabsCSS.glassCardTitle}
