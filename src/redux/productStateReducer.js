@@ -18,6 +18,7 @@ let initialState = {
                 gDiscountPercent: 12,
                 isTry: true,
                 isInCart: false,
+                isFavorite: false
             },
             {
                 id: 1,
