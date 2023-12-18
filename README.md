@@ -8,7 +8,7 @@
 #### Redux - библиотека для управление состоянием и данными
 #### Material UI - css-библиотека
 
-***[Открыть страницу](https://gusennn.github.io/focustyle-app/)***
+***[Открыть страницу Github Pages](https://gusennn.github.io/focustyle-app/)***
 
 # Функциональность
 Основные возможности, реализованные в проекте:
@@ -39,7 +39,7 @@
 ## Mobile version
 ![using a color picker](/src/gif/mobile-version.gif)
 
-***[Открыть страницу](https://gusennn.github.io/focustyle-app/)***
+***[Открыть страницу Github Pages](https://gusennn.github.io/focustyle-app/)***
 
 # Разработчики
 ## Дизайн:
