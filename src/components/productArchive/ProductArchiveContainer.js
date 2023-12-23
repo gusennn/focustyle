@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import ProductArchive from "./ProductArchive";
-import {addFavor, productCatNameTry, productIdTry, productTabSwitch} from "../../redux/productStateReducer";
+import {productIdTry, productTabSwitch} from "../../redux/productStateReducer";
 
 let mapStateToProps =(state)=> {
     return {

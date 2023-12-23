@@ -1,8 +1,8 @@
 import React from "react";
 import {connect} from "react-redux";
 import DeleteBtn from "./DeleteBtn";
-import {cartItemDelete} from "../../redux/cartStateReducer";
-import {deleteCartItem} from "../../redux/productStateReducer";
+import {cartItemDelete} from "../../../redux/cartStateReducer";
+import {deleteCartItem} from "../../../redux/productStateReducer";
 
 let mapStateToProps =(state, props)=> {
     let valueId = props.valueId

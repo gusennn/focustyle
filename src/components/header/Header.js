@@ -9,8 +9,8 @@ const links = [
         href: 'about-store'
     },
     {
-        title: 'Разработчики',
-        href: 'blog'
+        title: 'Разработка',
+        href: 'team'
     }
 ];
 
@@ -45,11 +45,21 @@ const Header = (props) => {
                 </div>
                 <ul className={hCSS.header__nav}>
                     <li>
+                        {
+                            props.likeStatus ?
+                                <div className='indicationHeaderPoint'></div>
+                                : <></>
+                        }
                         <NavLink to='/likes' className={`${hCSS.header__nav__item} ${hCSS.like}`}>
                             <span className={hCSS.header__hidden}>Перейти в сохраненные товары</span>
                         </NavLink>
                     </li>
                     <li>
+                        {
+                            props.cartStatus ?
+                                <div className='indicationHeaderPoint'></div>
+                                : <></>
+                        }
                         <NavLink to='/cart' className={`${hCSS.header__nav__item} ${hCSS.basket}`}>
                             <span className={hCSS.header__hidden}>Перейти в корзину</span>
                         </NavLink>

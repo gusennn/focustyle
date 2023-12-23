@@ -28,6 +28,10 @@
   list-style: none;
 }
 
+.header__nav li {
+  position: relative;
+}
+
 .header__nav__item {
   width: 26px;
   height: 23px;
@@ -40,6 +44,8 @@
 
 .like {
   background: url(../../assets/svg/icon_heart.svg) no-repeat center/22px;
+  position: relative;
+  z-index: 1;
 }
 
 .basket {

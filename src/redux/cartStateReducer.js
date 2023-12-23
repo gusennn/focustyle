@@ -1,10 +1,9 @@
-import cart from "../components/cart/Cart";
-
 let initialState = {
     cartList: [],
     cartItemsCounter: 0,
     totalCartPrice: 0,
     totalCartPriceDiscount: 0,
+    cartIndication: 0
 }
 
 const CART_STATE = 'CART-STATE'
@@ -33,12 +32,7 @@ export const cartItemDelete = (id) => {
     }
 }
 
-const CART_CAT_CHECK = 'CART-CAT-CHECK'
-export const cartGetCatName = (name) => {
-    return {
-        type: CART_CAT_CHECK, catName: name
-    }
-}
+
 
 const cartReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -59,6 +53,7 @@ const cartReducer = (state = initialState, action) => {
             }
             dataSpread.cartItemsCounter += 1
             dataSpread.cartList.push(cartItem)
+            dataSpread.cartIndication += 1
             let itemId = cartItem.id
             dataSpread.totalCartPrice += dataSpread.cartList[itemId].itemCountInCart * dataSpread.cartList[itemId].cartPrice
             dataSpread.totalCartPriceDiscount += Math.round(dataSpread.cartList[itemId].cartPrice - (dataSpread.cartList[itemId].cartPrice * dataSpread.cartList[itemId].cartDiscountPercent) / 100)
@@ -97,6 +92,7 @@ const cartReducer = (state = initialState, action) => {
             dataSpread.totalCartPriceDiscount -= dataSpread.cartList[deleteId].itemCountInCart * Math.round(dataSpread.cartList[deleteId].cartPrice - (dataSpread.cartList[deleteId].cartPrice * dataSpread.cartList[deleteId].cartDiscountPercent) / 100)
             dataSpread.cartList[deleteId].itemCountInCart = 0
             dataSpread.cartList[deleteId].isInCart = false
+            dataSpread.cartIndication -= 1
             return dataSpread
         }
         default:

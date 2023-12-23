@@ -1,5 +1,5 @@
 import React from 'react';
-import cartCSS from "./cart.module.css";
+import cartCSS from "../cart.module.css";
 import {Typography} from "@mui/material";
 
 function CartTitle(props) {

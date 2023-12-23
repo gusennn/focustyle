@@ -1,9 +1,9 @@
 import React from "react";
 import {Button, Typography} from "@mui/material";
 import cartCSS from './cart.module.css'
-import CartItemImageAndTitle from "./CartItemImageAndTitle";
-import DeleteBtnContainer from "./DeleteBtnContainer";
-import CartTitle from "./CartTitle";
+import CartItemImageAndTitle from "./singleCartCardItems/CartItemImageAndTitle";
+import DeleteBtnContainer from "./deleteFromCart/DeleteBtnContainer";
+import CartTitle from "./singleCartCardItems/CartTitle";
 import hpCss from "../homePage/homePage.module.css";
 import {NavLink} from "react-router-dom";
 

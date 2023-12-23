@@ -4,6 +4,7 @@ import {Button, Typography} from "@mui/material";
 import AddCartContainer from "../addCart/AddCartContainer";
 import glassIcon from '../../../assets/svg/glasses.svg';
 import {NavLink} from "react-router-dom";
+import AddLikeContainer from "../../likes/addToFavorite/AddLikeContainer";
 
 let TabContent = (props) => {
     let glassList = props.glassesList
@@ -14,7 +15,7 @@ let TabContent = (props) => {
         props.getTryId(id, props.categoryName)
     }
 
-    let onLikeClick =(e)=> {
+    let onLikeClick = (e) => {
         let id = e.currentTarget.value
         props.addFavorAction(id, props.categoryName)
     }
@@ -37,8 +38,9 @@ let TabContent = (props) => {
                          className={`${tabsCSS.glassCard} neumorph`}>
                         <img src={g.gImgUrl} alt={g.gTitle}/>
                         <div className={tabsCSS.sideAttributes}>
+                            <AddLikeContainer disableStatus={g.isFavorite} catName={props.categoryName}
+                                              glassList={glassList} checkCardId={g.id}/>
                             <button><img src={glassIcon} alt="Примерка"/></button>
-
                         </div>
                         <Typography
                             className={tabsCSS.glassCardTitle}

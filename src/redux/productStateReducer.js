@@ -282,7 +282,6 @@ export const productTabSwitch = (num) => {
 }
 
 
-
 const PRODUCT_CAT_NAME = 'PRODUCT-CAT-NAME'
 export const productCatName = (catName) => {
     return {
@@ -306,11 +305,24 @@ export const isInCartToggle = (id) => {
         type: IS_IN_CART_CHECKER, cardId: id
     }
 }
+const IS_IN_LIKE_CHECKER = 'IS-IN-LIKE-CHECKER'
+export const isInLikeToggle = (id) => {
+    return {
+        type: IS_IN_LIKE_CHECKER, cardId: id
+    }
+}
 
 const GET_CART_ITEM_DELETE = 'GET-CART-ITEM-DELETE'
 export const deleteCartItem = (name, cardId) => {
     return {
         type: GET_CART_ITEM_DELETE, deleteItemCatName: name, deleteCardId: cardId
+    }
+}
+
+const GET_LIKE_ITEM_DELETE = 'GET-LIKE-ITEM-DELETE'
+export const deleteLikeItem = (name, cardId) => {
+    return {
+        type: GET_LIKE_ITEM_DELETE, deleteItemCatName: name, deleteCardId: cardId
     }
 }
 
@@ -371,6 +383,32 @@ const productReducer = (state = initialState, action) => {
             }
             return dataSpread
         }
+        case IS_IN_LIKE_CHECKER: {
+            let dataSpread = { ...state }
+            dataSpread.glasses = { ...state.glasses }
+            let cardId = action.cardId
+            if (dataSpread.glassCategoryName === 'solarGlass') {
+                if (!dataSpread.glasses.solarGlass[cardId].isFavorite) {
+                    dataSpread.glasses.solarGlass[cardId].isFavorite = true
+                }
+            }
+            if (dataSpread.glassCategoryName === 'fishingGlass') {
+                if (!dataSpread.glasses.fishingGlass[cardId].isFavorite) {
+                    dataSpread.glasses.fishingGlass[cardId].isFavorite = true
+                }
+            }
+            if (dataSpread.glassCategoryName === 'drivingGlass') {
+                if (!dataSpread.glasses.drivingGlass[cardId].isFavorite) {
+                    dataSpread.glasses.drivingGlass[cardId].isFavorite = true
+                }
+            }
+            if (dataSpread.glassCategoryName === 'pcGlass') {
+                if (!dataSpread.glasses.pcGlass[cardId].isFavorite) {
+                    dataSpread.glasses.pcGlass[cardId].isFavorite = true
+                }
+            }
+            return dataSpread
+        }
         case GET_CART_ITEM_DELETE: {
             let dataSpread = { ...state }
             dataSpread.glasses = { ...state.glasses }
@@ -394,6 +432,33 @@ const productReducer = (state = initialState, action) => {
             if (cartName === 'pcGlass') {
                 if (dataSpread.glasses.pcGlass[cardId].isInCart) {
                     dataSpread.glasses.pcGlass[cardId].isInCart = false
+                }
+            }
+            return dataSpread
+        }
+        case GET_LIKE_ITEM_DELETE: {
+            let dataSpread = { ...state }
+            dataSpread.glasses = { ...state.glasses }
+            let likeName = action.deleteItemCatName
+            let likeId = action.deleteCardId
+            if (likeName === 'solarGlass') {
+                if (dataSpread.glasses.solarGlass[likeId].isFavorite) {
+                    dataSpread.glasses.solarGlass[likeId].isFavorite = false
+                }
+            }
+            if (likeName === 'fishingGlass') {
+                if (dataSpread.glasses.fishingGlass[likeId].isFavorite) {
+                    dataSpread.glasses.fishingGlass[likeId].isFavorite = false
+                }
+            }
+            if (likeName === 'drivingGlass') {
+                if (dataSpread.glasses.drivingGlass[likeId].isFavorite) {
+                    dataSpread.glasses.drivingGlass[likeId].isFavorite = false
+                }
+            }
+            if (likeName === 'pcGlass') {
+                if (dataSpread.glasses.pcGlass[likeId].isFavorite) {
+                    dataSpread.glasses.pcGlass[likeId].isFavorite = false
                 }
             }
             return dataSpread

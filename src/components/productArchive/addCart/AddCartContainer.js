@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import AddCart from "./AddCart";
-import {cartGetCatName, cartState} from "../../../redux/cartStateReducer";
+import {cartState} from "../../../redux/cartStateReducer";
 import {isInCartToggle, productCatName} from "../../../redux/productStateReducer";
 
 let mapStateToProps = (state, props) => {
@@ -19,9 +19,7 @@ let mapStateToProps = (state, props) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        cartCatName: (catName) => {
-            dispatch(cartGetCatName(catName))
-        },
+
         isCartChecker: (id) => {
             dispatch(isInCartToggle(id))
         },

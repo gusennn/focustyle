@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from "@mui/material";
-import cartCSS from "./cart.module.css";
-import delete_svg from '../../assets/svg/trash.svg'
+import cartCSS from "../cart.module.css";
+import delete_svg from '../../../assets/svg/trash.svg'
 
 function DeleteBtn(props) {
 

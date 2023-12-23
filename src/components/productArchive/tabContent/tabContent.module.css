@@ -37,13 +37,23 @@ img {
 
 .sideAttributes {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
 }
 
 .sideAttributes button {
-    width: fit-content;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.sideAttributes button img {
+    width: 100%;
 }
 
 .glassCardTitle {
