@@ -46,19 +46,20 @@
 }
 
 .personItemActive {
-  width: 600px;
+  width: 850px;
   transition: .2s;
 }
 
 .demoContentWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   width: 90px;
   flex-shrink: 0;
-  height: 620px;
+  height: 850px;
   transition: .2s;
+  padding: 20px 0;
 }
 
 .demoContentWrapper .demoTitle {
@@ -66,6 +67,10 @@
   font-weight: 400;
   width: 20px;
   word-break: break-all;
+}
+
+.personImage {
+  max-height: 300px;
 }
 
 .demoTitleHidden {
@@ -92,16 +97,22 @@
 .aboutPersonShow {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   height: inherit;
   opacity: 1;
   transition: opacity .5s ease-in-out .5s;
 }
 
-.badgeWrapper, .personSocialLinks {
+.badgeWrapper, .personSocialLinks, .soft {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+}
+
+.personDescription {
+  height: 150px;
+  max-height: 160px;
+  font-size: 20px;
 }
 
 @media screen and ( max-width: 960px ){

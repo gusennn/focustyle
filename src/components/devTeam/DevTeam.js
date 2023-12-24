@@ -6,39 +6,96 @@ import reduxLogo from "../../assets/icons/redux.png";
 import materialUILogo from "../../assets/icons/muilogo.png";
 import nodeJSLogo from "../../assets/icons/node-js.png";
 import {Link} from "react-router-dom";
+import vkLogo from "../../assets/icons/VK.png";
+import instLogo from "../../assets/icons/Instagram_logo.png";
 import tgLogo from "../../assets/icons/Telegram-logo.png";
 import githubLogo from "../../assets/icons/gh.png";
+import html5Logo from "../../assets/icons/html5.png";
+import css3Logo from "../../assets/icons/CSS3_logo.png";
+import figmaLogo from "../../assets/icons/figma.webp";
+import afLogo from "../../assets/icons/Adobe_Photoshop_CC_icon.svg.png";
+import inkLogo from "../../assets/icons/Inkscape_logo_(2-colour).svg";
+import cdLogo from "../../assets/icons/coreldraw-icon.webp";
+import bdLogo from "../../assets/icons/Blender_logo_no_text.png";
+import gimpLogo from "../../assets/icons/gimp.png";
+import sfLogo from "../../assets/icons/sf.png";
+import vsLogo from "../../assets/icons/Visual_Studio_Code.png";
+import miroLogo from "../../assets/icons/miro.png";
+import wsLogo from "../../assets/icons/WebStorm_Icon.png";
+import ytLogo from "../../assets/icons/Yandex.Tracker_2018.png";
 
+
+import personImgDaryaAvatar from '../../assets/team/focustle-design-darya.jpeg';
+import personImgDarya from '../../assets/team/focustle-design-darya.jpeg';
+
+import personImgGusenAvatar from '../../assets/team/focustle-dev-gusen.jpg';
+import personImgGusen from '../../assets/team/focustle-dev-gusen.jpg';
 
 function DevTeam() {
 
     let avatarImg = 'https://p7.hiclipart.com/preview/814/977/80/rick-sanchez-pocket-mortys-morty-smith-rick-and-morty-season-3-meeseeks-and-destroy-others.jpg'
     let personImg = 'https://liveboldandbloom.com/wp-content/uploads/2021/09/Untitled_design_3_1-768x538.png'
 
-    let onFirstCardClick =()=> {
-        let personCard = document.getElementById('personItem1')
-        let personDemoTitle = document.querySelector(`#personItem1 .demoTitle`)
-        let aboutPerson = document.querySelector(`#personItem1 .aboutPerson`)
-        personCard.classList.toggle('personItemActive')
-        personDemoTitle.classList.toggle('demoTitleHidden')
-        aboutPerson.classList.toggle('aboutPersonShow')
-    }
 
+    let onFirstCardClick =()=> {
+        let personCard1 = document.getElementById('personItem1')
+        let personCard2 = document.getElementById('personItem2')
+        let personCard3 = document.getElementById('personItem3')
+        let personDemoTitle1 = document.querySelector(`#personItem1 .demoTitle`)
+        let personDemoTitle2 = document.querySelector(`#personItem2 .demoTitle`)
+        let personDemoTitle3 = document.querySelector(`#personItem3 .demoTitle`)
+        let aboutPerson1 = document.querySelector(`#personItem1 .aboutPerson`)
+        let aboutPerson2 = document.querySelector(`#personItem2 .aboutPerson`)
+        let aboutPerson3 = document.querySelector(`#personItem3 .aboutPerson`)
+        personCard1.classList.toggle('personItemActive')
+        personCard2.classList.remove('personItemActive')
+        personCard3.classList.remove('personItemActive')
+        personDemoTitle1.classList.toggle('demoTitleHidden')
+        personDemoTitle2.classList.remove('demoTitleHidden')
+        personDemoTitle3.classList.remove('demoTitleHidden')
+        aboutPerson1.classList.toggle('aboutPersonShow')
+        aboutPerson2.classList.remove('aboutPersonShow')
+        aboutPerson3.classList.remove('aboutPersonShow')
+    }
     let onMiddleCardClick =()=> {
-        let personCard = document.getElementById('personItem2')
-        let personDemoTitle = document.querySelector(`#personItem2 .demoTitle`)
-        let aboutPerson = document.querySelector(`#personItem2 .aboutPerson`)
-        personCard.classList.toggle('personItemActive')
-        personDemoTitle.classList.toggle('demoTitleHidden')
-        aboutPerson.classList.toggle('aboutPersonShow')
+        let personCard1 = document.getElementById('personItem1')
+        let personCard2 = document.getElementById('personItem2')
+        let personCard3 = document.getElementById('personItem3')
+        let personDemoTitle1 = document.querySelector(`#personItem1 .demoTitle`)
+        let personDemoTitle2 = document.querySelector(`#personItem2 .demoTitle`)
+        let personDemoTitle3 = document.querySelector(`#personItem3 .demoTitle`)
+        let aboutPerson1 = document.querySelector(`#personItem1 .aboutPerson`)
+        let aboutPerson2 = document.querySelector(`#personItem2 .aboutPerson`)
+        let aboutPerson3 = document.querySelector(`#personItem3 .aboutPerson`)
+        personCard1.classList.remove('personItemActive')
+        personCard2.classList.toggle('personItemActive')
+        personCard3.classList.remove('personItemActive')
+        personDemoTitle1.classList.remove('demoTitleHidden')
+        personDemoTitle2.classList.toggle('demoTitleHidden')
+        personDemoTitle3.classList.remove('demoTitleHidden')
+        aboutPerson1.classList.remove('aboutPersonShow')
+        aboutPerson2.classList.toggle('aboutPersonShow')
+        aboutPerson3.classList.remove('aboutPersonShow')
     }
     let onLastCardClick =()=> {
-        let personCard = document.getElementById('personItem3')
-        let personDemoTitle = document.querySelector(`#personItem3 .demoTitle`)
-        let aboutPerson = document.querySelector(`#personItem3 .aboutPerson`)
-        personCard.classList.toggle('personItemActive')
-        personDemoTitle.classList.toggle('demoTitleHidden')
-        aboutPerson.classList.toggle('aboutPersonShow')
+        let personCard1 = document.getElementById('personItem1')
+        let personCard2 = document.getElementById('personItem2')
+        let personCard3 = document.getElementById('personItem3')
+        let personDemoTitle1 = document.querySelector(`#personItem1 .demoTitle`)
+        let personDemoTitle2 = document.querySelector(`#personItem2 .demoTitle`)
+        let personDemoTitle3 = document.querySelector(`#personItem3 .demoTitle`)
+        let aboutPerson1 = document.querySelector(`#personItem1 .aboutPerson`)
+        let aboutPerson2 = document.querySelector(`#personItem2 .aboutPerson`)
+        let aboutPerson3 = document.querySelector(`#personItem3 .aboutPerson`)
+        personCard1.classList.remove('personItemActive')
+        personCard2.classList.remove('personItemActive')
+        personCard3.classList.toggle('personItemActive')
+        personDemoTitle1.classList.remove('demoTitleHidden')
+        personDemoTitle2.classList.remove('demoTitleHidden')
+        personDemoTitle3.classList.toggle('demoTitleHidden')
+        aboutPerson1.classList.remove('aboutPersonShow')
+        aboutPerson2.classList.remove('aboutPersonShow')
+        aboutPerson3.classList.toggle('aboutPersonShow')
     }
 
     return (
@@ -52,12 +109,20 @@ function DevTeam() {
                             <img src={avatarImg} alt=""/>
                         </div>
                         <div className="aboutPerson">
-                            <img className='personImage' src={personImg} alt=""/>
+                            <img className='personImage' src={personImgGusen} alt=""/>
                             <div className="cardHeader">
-                                <h4 className="personTitle">Разработчик</h4>
-                                <h4 className="personTitle">John Doe</h4>
+                                <Typography variant={'h5'} className="personTitle">Разработчик</Typography>
+                                <Typography variant={'h6'} className="personTitle"><strong>Гусен</strong></Typography>
                             </div>
                             <div className="badgeWrapper">
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={html5Logo} alt="HTML5"/>}
+                                    label="HTML5" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={css3Logo} alt="CSS3"/>}
+                                    label="CSS3" variant="outlined"
+                                />
                                 <Chip
                                     avatar={<img style={{borderRadius: 50}} src={jsLogo} alt="JavaScript"/>}
                                     label="JavaScript" variant="outlined"
@@ -78,23 +143,51 @@ function DevTeam() {
                                     avatar={<img style={{borderRadius: 50}} src={nodeJSLogo} alt="NodeJS"/>}
                                     label="NodeJS" variant="outlined"
                                 />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                    label="GitHub" variant="outlined"
+                                />
                             </div>
-                            <div className="personDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Architecto asperiores dolor esse, laborum neque non officia perspiciatis quis sit suscipit.
+                            <p className="personDescription">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum, dolorem dolores esse expedita fugit harum illum labore laborum libero modi molestias obcaecati possimus quis quisquam reprehenderit repudiandae ullam voluptatem.
+                            </p>
+                            <div className="soft">
+                                <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={figmaLogo} alt="Figma"/>}
+                                    label="Figma" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={afLogo} alt="Adobe Photoshop"/>}
+                                    label="Adobe Photoshop" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={miroLogo} alt="Miro"/>}
+                                    label="Miro" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={wsLogo} alt="WebStorm"/>}
+                                    label="WebStorm" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={ytLogo} alt="Яндекс Трекер"/>}
+                                    label="Яндекс Трекер" variant="outlined"
+                                />
                             </div>
                             <div className="personSocialLinks">
-                                <Typography variant={'h6'}>Мои ссылки: </Typography>
-                                <Link to={'https://skillboxcode.mave.digital/'} target={'_blank'}>
+                                <Typography variant={'h6'}><strong>Мои ссылки: </strong></Typography>
+                                <Link to={'https://t.me/JS_FS'} target={'_blank'}>
                                     <Chip
                                         avatar={<img style={{borderRadius: 50}} src={tgLogo} alt="Telegram"/>}
                                         label="Telegram" variant="outlined"
                                     />
                                 </Link>
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
-                                    label="GitHub" variant="outlined"
-                                />
+                                <Link to={'https://github.com/gusennn'} target={'_blank'}>
+                                    <Chip
+                                        avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                        label="GitHub" variant="outlined"
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -107,10 +200,18 @@ function DevTeam() {
                         <div className="aboutPerson">
                             <img className='personImage' src={personImg} alt=""/>
                             <div className="cardHeader">
-                                <h4 className="personTitle">Разработчик</h4>
-                                <h4 className="personTitle">John Doe</h4>
+                                <Typography variant={'h5'} className="personTitle">Разработчик</Typography>
+                                <Typography variant={'h6'} className="personTitle"><strong>Лина</strong></Typography>
                             </div>
                             <div className="badgeWrapper">
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={html5Logo} alt="HTML5"/>}
+                                    label="HTML5" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={css3Logo} alt="CSS3"/>}
+                                    label="CSS3" variant="outlined"
+                                />
                                 <Chip
                                     avatar={<img style={{borderRadius: 50}} src={jsLogo} alt="JavaScript"/>}
                                     label="JavaScript" variant="outlined"
@@ -131,23 +232,63 @@ function DevTeam() {
                                     avatar={<img style={{borderRadius: 50}} src={nodeJSLogo} alt="NodeJS"/>}
                                     label="NodeJS" variant="outlined"
                                 />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                    label="GitHub" variant="outlined"
+                                />
                             </div>
-                            <div className="personDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Architecto asperiores dolor esse, laborum neque non officia perspiciatis quis sit suscipit.
+                            <p className="personDescription">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum, dolorem dolores esse expedita fugit harum illum labore laborum libero modi molestias obcaecati possimus quis quisquam reprehenderit repudiandae ullam voluptatem.
+                            </p>
+                            <div className="soft">
+                                <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={figmaLogo} alt="Figma"/>}
+                                    label="Figma" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={afLogo} alt="Adobe Photoshop"/>}
+                                    label="Adobe Photoshop" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={inkLogo} alt="Inkscape"/>}
+                                    label="Inkscape" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={cdLogo} alt="CorelDraw"/>}
+                                    label="CorelDraw" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={bdLogo} alt="Blender"/>}
+                                    label="Blender" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={gimpLogo} alt="GIMP"/>}
+                                    label="GIMP" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={sfLogo} alt="Synfig Studio"/>}
+                                    label="Synfig Studio" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={vsLogo} alt="VS Code"/>}
+                                    label="VS Code" variant="outlined"
+                                />
                             </div>
                             <div className="personSocialLinks">
-                                <Typography variant={'h6'}>Мои ссылки: </Typography>
-                                <Link to={'https://skillboxcode.mave.digital/'} target={'_blank'}>
+                                <Typography variant={'h6'}><strong>Мои ссылки: </strong></Typography>
+                                <Link to={'https://t.me/JS_FS'} target={'_blank'}>
                                     <Chip
                                         avatar={<img style={{borderRadius: 50}} src={tgLogo} alt="Telegram"/>}
                                         label="Telegram" variant="outlined"
                                     />
                                 </Link>
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
-                                    label="GitHub" variant="outlined"
-                                />
+                                <Link to={'https://github.com/gusennn'} target={'_blank'}>
+                                    <Chip
+                                        avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                        label="GitHub" variant="outlined"
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -155,52 +296,98 @@ function DevTeam() {
                          className='personItem neumorph'>
                         <div className="demoContentWrapper">
                             <h4 className='demoTitle'>Дизайнер</h4>
-                            <img src={avatarImg} alt=""/>
+                            <img src={personImgDaryaAvatar} alt=""/>
                         </div>
                         <div className="aboutPerson">
-                            <img className='personImage' src={personImg} alt=""/>
+                            <img className='personImage' src={personImgDarya} alt=""/>
                             <div className="cardHeader">
-                                <h4 className="personTitle">Дизайнер</h4>
-                                <h4 className="personTitle">John Doe</h4>
+                                <Typography variant={'h5'} className="personTitle">Дизайнер</Typography>
+                                <Typography variant={'h6'} className="personTitle"><strong>Дарья</strong></Typography>
                             </div>
                             <div className="badgeWrapper">
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={html5Logo} alt="HTML5"/>}
+                                    label="HTML5" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={css3Logo} alt="CSS3"/>}
+                                    label="CSS3" variant="outlined"
+                                />
                                 <Chip
                                     avatar={<img style={{borderRadius: 50}} src={jsLogo} alt="JavaScript"/>}
                                     label="JavaScript" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={reactLogo} alt="ReactJS"/>}
-                                    label="ReactJS" variant="outlined"
+                                    label="UI/UX" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={reduxLogo} alt="Redux"/>}
-                                    label="Redux" variant="outlined"
+                                    label="SQL" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={materialUILogo} alt="MaterialUI"/>}
-                                    label="MaterialUI" variant="outlined"
-                                />
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={nodeJSLogo} alt="NodeJS"/>}
-                                    label="NodeJS" variant="outlined"
+                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                    label="GitHub" variant="outlined"
                                 />
                             </div>
-                            <div className="personDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Architecto asperiores dolor esse, laborum neque non officia perspiciatis quis sit suscipit.
+                            <p className="personDescription">
+                                Учитель информатики и технологии по образованию.
+                                Готова творить в Фигме сутками напролёт.
+                                Обожает дизайн, сериалы и все, что связано с творчеством.
+                            </p>
+                            <div className="soft">
+                                <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={figmaLogo} alt="Figma"/>}
+                                    label="Figma" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={afLogo} alt="Adobe Photoshop"/>}
+                                    label="Adobe Photoshop" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={inkLogo} alt="Inkscape"/>}
+                                    label="Inkscape" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={cdLogo} alt="CorelDraw"/>}
+                                    label="CorelDraw" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={bdLogo} alt="Blender"/>}
+                                    label="Blender" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={gimpLogo} alt="GIMP"/>}
+                                    label="GIMP" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={sfLogo} alt="Synfig Studio"/>}
+                                    label="Synfig Studio" variant="outlined"
+                                />
+                                <Chip
+                                    avatar={<img style={{borderRadius: 50}} src={vsLogo} alt="VS Code"/>}
+                                    label="VS Code" variant="outlined"
+                                />
                             </div>
                             <div className="personSocialLinks">
-                                <Typography variant={'h6'}>Мои ссылки: </Typography>
-                                <Link to={'https://skillboxcode.mave.digital/'} target={'_blank'}>
+                                <Typography variant={'h6'}><strong>Мои ссылки: </strong></Typography>
+                                <Link to={'https://t.me/gaandarya'} target={'_blank'}>
                                     <Chip
                                         avatar={<img style={{borderRadius: 50}} src={tgLogo} alt="Telegram"/>}
                                         label="Telegram" variant="outlined"
                                     />
                                 </Link>
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
-                                    label="GitHub" variant="outlined"
-                                />
+                                <Link to={'https://vk.com/gaan.designer'} target={'_blank'}>
+                                    <Chip
+                                        avatar={<img style={{borderRadius: 50}} src={vkLogo} alt="ВКонтакте"/>}
+                                        label="ВКонтакте" variant="outlined"
+                                    />
+                                </Link>
+                                <Link to={'https://www.instagram.com/gaan.designer'} target={'_blank'}>
+                                    <Chip
+                                        avatar={<img style={{borderRadius: 50}} src={instLogo} alt="Instagram"/>}
+                                        label="Instagram" variant="outlined"
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>
