@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import createTheme from "@mui/material/styles/createTheme";
-import { HashRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./redux/redux";
 
@@ -26,7 +26,7 @@ root.render(
                     <App/>
                 </ThemeProvider>
                 </Provider>
-        </HashRouter>
+        </HashRouter >
     </React.StrictMode>
 );
 reportWebVitals ();

@@ -24,6 +24,7 @@
 
 /*   */
 .personMain {
+  margin-top: 50px;
   height: inherit;
 }
 
@@ -110,9 +111,25 @@
 }
 
 .personDescription {
-  height: 150px;
-  max-height: 160px;
+  height: 200px;
+  max-height: 200px;
   font-size: 20px;
+}
+
+.personDescription h6 {
+  position: relative;
+}
+.personDescription h6:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #222;
+  mix-blend-mode: difference;
+  z-index: 32;
 }
 
 @media screen and ( max-width: 960px ){

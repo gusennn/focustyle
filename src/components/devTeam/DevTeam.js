@@ -100,6 +100,9 @@ function DevTeam() {
 
     return (
         <div>
+            <Typography variant={'h5'}><i>Сначала была Идея.</i></Typography>
+            <Typography variant={'h5'}><i>Идея сложилась в картину.</i></Typography>
+            <Typography variant={'h5'}><i>И картина ожила...</i></Typography>
             <div className='personMain'>
                 <div className='personWrapper'>
                     <div onClick={onFirstCardClick} id='personItem1'
@@ -149,7 +152,12 @@ function DevTeam() {
                                 />
                             </div>
                             <p className="personDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum, dolorem dolores esse expedita fugit harum illum labore laborum libero modi molestias obcaecati possimus quis quisquam reprehenderit repudiandae ullam voluptatem.
+                                <Typography variant={'h6'}>Ходил на собеседование с портфолио на флешке, не приняли.</Typography>
+                                <Typography variant={'h6'}>Любит CSS, React и делать графики.</Typography>
+                                <Typography variant={'h6'}>Думает, что умеет делать макеты, но это не так.</Typography>
+                                <Typography variant={'h6'}>Готов работать за идею без еды, правда, недолго.</Typography>
+                                <Typography variant={'h6'}>Не любит, когда фотографируют и реп.</Typography>
+                                <Typography variant={'h6'}>Слушает NCS и Лепса</Typography>
                             </p>
                             <div className="soft">
                                 <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
@@ -329,9 +337,9 @@ function DevTeam() {
                                 />
                             </div>
                             <p className="personDescription">
-                                Учитель информатики и технологии по образованию.
-                                Готова творить в Фигме сутками напролёт.
-                                Обожает дизайн, сериалы и все, что связано с творчеством.
+                                <Typography variant={'h6'}>Учитель информатики и технологии по образованию.</Typography>
+                                <Typography variant={'h6'}>Готова творить в Фигме сутками напролёт.</Typography>
+                                <Typography variant={'h6'}>Обожает дизайн, сериалы и все, что связано с творчеством.</Typography>
                             </p>
                             <div className="soft">
                                 <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
