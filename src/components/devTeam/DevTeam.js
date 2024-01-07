@@ -1,11 +1,11 @@
 import React from 'react';
-import {Chip, Typography} from "@mui/material";
+import { Chip, Typography } from "@mui/material";
 import jsLogo from "../../assets/icons/JavaScript-logo.png";
 import reactLogo from "../../assets/icons/react-logo.png";
 import reduxLogo from "../../assets/icons/redux.png";
 import materialUILogo from "../../assets/icons/muilogo.png";
 import nodeJSLogo from "../../assets/icons/node-js.png";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import vkLogo from "../../assets/icons/VK.png";
 import instLogo from "../../assets/icons/Instagram_logo.png";
 import tgLogo from "../../assets/icons/Telegram-logo.png";
@@ -31,13 +31,16 @@ import personImgDarya from '../../assets/team/focustle-design-darya.jpeg';
 import personImgGusenAvatar from '../../assets/team/focustle-dev-gusen.jpg';
 import personImgGusen from '../../assets/team/focustle-dev-gusen.jpg';
 
+import personImgLinaAvatar from '../../assets/team/focustle-design-lina-ava.jpg';
+import personImgLina from '../../assets/team/focustle-design-lina.jpg';
+
 function DevTeam() {
 
     let avatarImg = 'https://p7.hiclipart.com/preview/814/977/80/rick-sanchez-pocket-mortys-morty-smith-rick-and-morty-season-3-meeseeks-and-destroy-others.jpg'
     let personImg = 'https://liveboldandbloom.com/wp-content/uploads/2021/09/Untitled_design_3_1-768x538.png'
 
 
-    let onFirstCardClick =()=> {
+    let onFirstCardClick = () => {
         let personCard1 = document.getElementById('personItem1')
         let personCard2 = document.getElementById('personItem2')
         let personCard3 = document.getElementById('personItem3')
@@ -57,7 +60,7 @@ function DevTeam() {
         aboutPerson2.classList.remove('aboutPersonShow')
         aboutPerson3.classList.remove('aboutPersonShow')
     }
-    let onMiddleCardClick =()=> {
+    let onMiddleCardClick = () => {
         let personCard1 = document.getElementById('personItem1')
         let personCard2 = document.getElementById('personItem2')
         let personCard3 = document.getElementById('personItem3')
@@ -77,7 +80,7 @@ function DevTeam() {
         aboutPerson2.classList.toggle('aboutPersonShow')
         aboutPerson3.classList.remove('aboutPersonShow')
     }
-    let onLastCardClick =()=> {
+    let onLastCardClick = () => {
         let personCard1 = document.getElementById('personItem1')
         let personCard2 = document.getElementById('personItem2')
         let personCard3 = document.getElementById('personItem3')
@@ -106,48 +109,48 @@ function DevTeam() {
             <div className='personMain'>
                 <div className='personWrapper'>
                     <div onClick={onFirstCardClick} id='personItem1'
-                         className='personItem neumorph'>
+                        className='personItem neumorph'>
                         <div className="demoContentWrapper">
                             <h4 className='demoTitle'>Разработчик</h4>
-                            <img src={avatarImg} alt=""/>
+                            <img src={avatarImg} alt="" />
                         </div>
                         <div className="aboutPerson">
-                            <img className='personImage' src={personImgGusen} alt=""/>
+                            <img className='personImage' src={personImgGusen} alt="" />
                             <div className="cardHeader">
                                 <Typography variant={'h5'} className="personTitle">Разработчик</Typography>
                                 <Typography variant={'h6'} className="personTitle"><strong>Гусен</strong></Typography>
                             </div>
                             <div className="badgeWrapper">
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={html5Logo} alt="HTML5"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={html5Logo} alt="HTML5" />}
                                     label="HTML5" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={css3Logo} alt="CSS3"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={css3Logo} alt="CSS3" />}
                                     label="CSS3" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={jsLogo} alt="JavaScript"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={jsLogo} alt="JavaScript" />}
                                     label="JavaScript" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={reactLogo} alt="ReactJS"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={reactLogo} alt="ReactJS" />}
                                     label="ReactJS" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={reduxLogo} alt="Redux"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={reduxLogo} alt="Redux" />}
                                     label="Redux" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={materialUILogo} alt="MaterialUI"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={materialUILogo} alt="MaterialUI" />}
                                     label="MaterialUI" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={nodeJSLogo} alt="NodeJS"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={nodeJSLogo} alt="NodeJS" />}
                                     label="NodeJS" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={githubLogo} alt="GitHub" />}
                                     label="GitHub" variant="outlined"
                                 />
                             </div>
@@ -162,23 +165,23 @@ function DevTeam() {
                             <div className="soft">
                                 <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={figmaLogo} alt="Figma"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={figmaLogo} alt="Figma" />}
                                     label="Figma" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={afLogo} alt="Adobe Photoshop"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={afLogo} alt="Adobe Photoshop" />}
                                     label="Adobe Photoshop" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={miroLogo} alt="Miro"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={miroLogo} alt="Miro" />}
                                     label="Miro" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={wsLogo} alt="WebStorm"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={wsLogo} alt="WebStorm" />}
                                     label="WebStorm" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={ytLogo} alt="Яндекс Трекер"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={ytLogo} alt="Яндекс Трекер" />}
                                     label="Яндекс Трекер" variant="outlined"
                                 />
                             </div>
@@ -186,13 +189,13 @@ function DevTeam() {
                                 <Typography variant={'h6'}><strong>Мои ссылки: </strong></Typography>
                                 <Link to={'https://t.me/JS_FS'} target={'_blank'}>
                                     <Chip
-                                        avatar={<img style={{borderRadius: 50}} src={tgLogo} alt="Telegram"/>}
+                                        avatar={<img style={{ borderRadius: 50 }} src={tgLogo} alt="Telegram" />}
                                         label="Telegram" variant="outlined"
                                     />
                                 </Link>
                                 <Link to={'https://github.com/gusennn'} target={'_blank'}>
                                     <Chip
-                                        avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                        avatar={<img style={{ borderRadius: 50 }} src={githubLogo} alt="GitHub" />}
                                         label="GitHub" variant="outlined"
                                     />
                                 </Link>
@@ -200,100 +203,84 @@ function DevTeam() {
                         </div>
                     </div>
                     <div onClick={onMiddleCardClick} id='personItem2'
-                         className='personItem neumorph'>
+                        className='personItem neumorph'>
                         <div className="demoContentWrapper">
                             <h4 className='demoTitle'>Разработчик</h4>
-                            <img src={avatarImg} alt=""/>
+                            <img src={personImgLinaAvatar} alt="" />
                         </div>
                         <div className="aboutPerson">
-                            <img className='personImage' src={personImg} alt=""/>
+                            <img className='personImage' src={personImgLina} alt="" />
                             <div className="cardHeader">
                                 <Typography variant={'h5'} className="personTitle">Разработчик</Typography>
                                 <Typography variant={'h6'} className="personTitle"><strong>Лина</strong></Typography>
                             </div>
                             <div className="badgeWrapper">
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={html5Logo} alt="HTML5"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={html5Logo} alt="HTML5" />}
                                     label="HTML5" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={css3Logo} alt="CSS3"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={css3Logo} alt="CSS3" />}
                                     label="CSS3" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={jsLogo} alt="JavaScript"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={jsLogo} alt="JavaScript" />}
                                     label="JavaScript" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={reactLogo} alt="ReactJS"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={reactLogo} alt="ReactJS" />}
                                     label="ReactJS" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={reduxLogo} alt="Redux"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={reduxLogo} alt="Redux" />}
                                     label="Redux" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={materialUILogo} alt="MaterialUI"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={materialUILogo} alt="MaterialUI" />}
                                     label="MaterialUI" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={nodeJSLogo} alt="NodeJS"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={nodeJSLogo} alt="NodeJS" />}
                                     label="NodeJS" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={githubLogo} alt="GitHub" />}
                                     label="GitHub" variant="outlined"
                                 />
                             </div>
                             <p className="personDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum, dolorem dolores esse expedita fugit harum illum labore laborum libero modi molestias obcaecati possimus quis quisquam reprehenderit repudiandae ullam voluptatem.
+                                <Typography variant={'h6'}>Проводит с редактором кода больше времени, чем со своей семьей.</Typography>
+                                <Typography variant={'h6'}>Умеет пользоваться гуглом и искать информацию.</Typography>
+                                <Typography variant={'h6'}>Изучает язык PHP и говорит на нем на уровне "london is the capital of great britain".</Typography>
+                                <Typography variant={'h6'}>Есть оконченное высшее техническое образование.</Typography>
+                                <Typography variant={'h6'}>Очень любит животных, особенно морских свинок.</Typography>
                             </p>
                             <div className="soft">
                                 <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={figmaLogo} alt="Figma"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={figmaLogo} alt="Figma" />}
                                     label="Figma" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={afLogo} alt="Adobe Photoshop"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={afLogo} alt="Adobe Photoshop" />}
                                     label="Adobe Photoshop" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={inkLogo} alt="Inkscape"/>}
-                                    label="Inkscape" variant="outlined"
-                                />
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={cdLogo} alt="CorelDraw"/>}
-                                    label="CorelDraw" variant="outlined"
-                                />
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={bdLogo} alt="Blender"/>}
-                                    label="Blender" variant="outlined"
-                                />
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={gimpLogo} alt="GIMP"/>}
-                                    label="GIMP" variant="outlined"
-                                />
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={sfLogo} alt="Synfig Studio"/>}
-                                    label="Synfig Studio" variant="outlined"
-                                />
-                                <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={vsLogo} alt="VS Code"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={vsLogo} alt="VS Code" />}
                                     label="VS Code" variant="outlined"
                                 />
                             </div>
                             <div className="personSocialLinks">
                                 <Typography variant={'h6'}><strong>Мои ссылки: </strong></Typography>
-                                <Link to={'https://t.me/JS_FS'} target={'_blank'}>
+                                <Link to={'https://t.me/LinaCor96'} target={'_blank'}>
                                     <Chip
-                                        avatar={<img style={{borderRadius: 50}} src={tgLogo} alt="Telegram"/>}
+                                        avatar={<img style={{ borderRadius: 50 }} src={tgLogo} alt="Telegram" />}
                                         label="Telegram" variant="outlined"
                                     />
                                 </Link>
-                                <Link to={'https://github.com/gusennn'} target={'_blank'}>
+                                <Link to={'https://github.com/LinaCor'} target={'_blank'}>
                                     <Chip
-                                        avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                        avatar={<img style={{ borderRadius: 50 }} src={githubLogo} alt="GitHub" />}
                                         label="GitHub" variant="outlined"
                                     />
                                 </Link>
@@ -301,28 +288,28 @@ function DevTeam() {
                         </div>
                     </div>
                     <div onClick={onLastCardClick} id='personItem3'
-                         className='personItem neumorph'>
+                        className='personItem neumorph'>
                         <div className="demoContentWrapper">
                             <h4 className='demoTitle'>Дизайнер</h4>
-                            <img src={personImgDaryaAvatar} alt=""/>
+                            <img src={personImgDaryaAvatar} alt="" />
                         </div>
                         <div className="aboutPerson">
-                            <img className='personImage' src={personImgDarya} alt=""/>
+                            <img className='personImage' src={personImgDarya} alt="" />
                             <div className="cardHeader">
                                 <Typography variant={'h5'} className="personTitle">Дизайнер</Typography>
                                 <Typography variant={'h6'} className="personTitle"><strong>Дарья</strong></Typography>
                             </div>
                             <div className="badgeWrapper">
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={html5Logo} alt="HTML5"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={html5Logo} alt="HTML5" />}
                                     label="HTML5" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={css3Logo} alt="CSS3"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={css3Logo} alt="CSS3" />}
                                     label="CSS3" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={jsLogo} alt="JavaScript"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={jsLogo} alt="JavaScript" />}
                                     label="JavaScript" variant="outlined"
                                 />
                                 <Chip
@@ -332,7 +319,7 @@ function DevTeam() {
                                     label="SQL" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={githubLogo} alt="GitHub"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={githubLogo} alt="GitHub" />}
                                     label="GitHub" variant="outlined"
                                 />
                             </div>
@@ -344,35 +331,35 @@ function DevTeam() {
                             <div className="soft">
                                 <Typography variant={'h6'}><strong>Владение ПО: </strong></Typography>
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={figmaLogo} alt="Figma"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={figmaLogo} alt="Figma" />}
                                     label="Figma" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={afLogo} alt="Adobe Photoshop"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={afLogo} alt="Adobe Photoshop" />}
                                     label="Adobe Photoshop" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={inkLogo} alt="Inkscape"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={inkLogo} alt="Inkscape" />}
                                     label="Inkscape" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={cdLogo} alt="CorelDraw"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={cdLogo} alt="CorelDraw" />}
                                     label="CorelDraw" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={bdLogo} alt="Blender"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={bdLogo} alt="Blender" />}
                                     label="Blender" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={gimpLogo} alt="GIMP"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={gimpLogo} alt="GIMP" />}
                                     label="GIMP" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={sfLogo} alt="Synfig Studio"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={sfLogo} alt="Synfig Studio" />}
                                     label="Synfig Studio" variant="outlined"
                                 />
                                 <Chip
-                                    avatar={<img style={{borderRadius: 50}} src={vsLogo} alt="VS Code"/>}
+                                    avatar={<img style={{ borderRadius: 50 }} src={vsLogo} alt="VS Code" />}
                                     label="VS Code" variant="outlined"
                                 />
                             </div>
@@ -380,19 +367,19 @@ function DevTeam() {
                                 <Typography variant={'h6'}><strong>Мои ссылки: </strong></Typography>
                                 <Link to={'https://t.me/gaandarya'} target={'_blank'}>
                                     <Chip
-                                        avatar={<img style={{borderRadius: 50}} src={tgLogo} alt="Telegram"/>}
+                                        avatar={<img style={{ borderRadius: 50 }} src={tgLogo} alt="Telegram" />}
                                         label="Telegram" variant="outlined"
                                     />
                                 </Link>
                                 <Link to={'https://vk.com/gaan.designer'} target={'_blank'}>
                                     <Chip
-                                        avatar={<img style={{borderRadius: 50}} src={vkLogo} alt="ВКонтакте"/>}
+                                        avatar={<img style={{ borderRadius: 50 }} src={vkLogo} alt="ВКонтакте" />}
                                         label="ВКонтакте" variant="outlined"
                                     />
                                 </Link>
                                 <Link to={'https://www.instagram.com/gaan.designer'} target={'_blank'}>
                                     <Chip
-                                        avatar={<img style={{borderRadius: 50}} src={instLogo} alt="Instagram"/>}
+                                        avatar={<img style={{ borderRadius: 50 }} src={instLogo} alt="Instagram" />}
                                         label="Instagram" variant="outlined"
                                     />
                                 </Link>
