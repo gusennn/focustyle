@@ -42,7 +42,7 @@
 
 # Команда
 ## Дизайн:
-### [Darya]('https://t.me/gaandarya')
+### [Darya](https://t.me/gaandarya)
 ***
 ## Разработка:
 ### [Lina](https://github.com/LinaCor)
