@@ -40,7 +40,7 @@
 
 ***[Открыть страницу Github Pages](https://gusennn.github.io/focustyle-app/)***
 
-# Разработчики
+# Команда
 ## Дизайн:
 ### [Darya]('#')
 ***
