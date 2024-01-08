@@ -10,6 +10,7 @@ import TryContainer from "./components/tryRoom/TryContainer";
 import LikesContainer from "./components/likes/LikesContainer";
 import HeaderContainer from "./components/header/HeaderContainer";
 import DevTeam from "./components/devTeam/DevTeam";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             </div>
 
             <div className='componentRenderArea'>
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="about-store" element={<AboutStore/>}/>

@@ -103,9 +103,7 @@ function DevTeam() {
 
     return (
         <div>
-            <Typography variant={'h5'}><i>Сначала была Идея.</i></Typography>
-            <Typography variant={'h5'}><i>Идея сложилась в картину.</i></Typography>
-            <Typography variant={'h5'}><i>И картина ожила...</i></Typography>
+            <Typography variant={'h5'}><i>Сначала была Идея. Идея сложилась в картину. И картина ожила...</i></Typography>
             <div className='personMain'>
                 <div className='personWrapper'>
                     <div onClick={onFirstCardClick} id='personItem1'
@@ -155,10 +153,9 @@ function DevTeam() {
                                 />
                             </div>
                             <p className="personDescription">
-                                <Typography variant={'h6'}>Ходил на собеседование с портфолио на флешке, не приняли.</Typography>
+                                <Typography variant={'h6'}>Ходил на собеседование с портфолио на флешке. Не приняли.</Typography>
                                 <Typography variant={'h6'}>Любит CSS, React и делать графики.</Typography>
                                 <Typography variant={'h6'}>Думает, что умеет делать макеты, но это не так.</Typography>
-                                <Typography variant={'h6'}>Готов работать за идею без еды, правда, недолго.</Typography>
                                 <Typography variant={'h6'}>Не любит, когда фотографируют и реп.</Typography>
                                 <Typography variant={'h6'}>Слушает NCS и Лепса</Typography>
                             </p>
